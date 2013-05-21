@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.apache.lucene.analysis.Analyzer;
 import org.hibernate.search.hibernate.example.dao.BookDao;
 import org.hibernate.search.hibernate.example.model.Book;
+import org.hibernate.search.hibernate.example.model.QueryResult;
 import org.hibernate.search.hibernate.example.service.BookService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -51,9 +52,9 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
-	public List<Book> query(String keyword, int start, int pagesize,
-			Analyzer analyzer, String... field) throws Exception {
+	public QueryResult<Book> query(String keyword, int start, int pagesize,Analyzer analyzer, String... field) throws Exception {
 		return bookDao.query(keyword, start, pagesize, analyzer, field);
 	}
+
 
 }

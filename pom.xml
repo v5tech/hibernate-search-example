@@ -81,7 +81,7 @@
 		<logback.version>1.0.12</logback.version>
 		<IKAnalyzer.version>2012-u6</IKAnalyzer.version>
 		<paoding-analyzer.version>3.0</paoding-analyzer.version>
-		
+		<ehcache.version>2.6.5</ehcache.version>
 	</properties>
 	
  
@@ -255,6 +255,12 @@
 		</dependency>
 		
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
 			<version>${hibernate.jpa.version}</version>
@@ -284,6 +290,13 @@
 		   <artifactId>hibernate-search-infinispan</artifactId>
 		   <version>${hibernate-search.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>${ehcache.version}</version>
+		</dependency>
+		
 		
 		<dependency>
 		  <groupId>IKAnalyzer</groupId>
