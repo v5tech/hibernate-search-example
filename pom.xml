@@ -8,12 +8,12 @@
   <version>1.0</version>
 
   <name>hibernate-search-example</name>
-  <url>https://github.com/sxyx2008/maven-framework-project</url>
+  <url>https://github.com/sxyx2008/hibernate-search-example</url>
 
   <!-- 问题解决信息 -->
 	<issueManagement>
 		<system>Github</system>
-        <url>https://github.com/sxyx2008/maven-framework-project/issues</url>
+        <url>https://github.com/sxyx2008/hibernate-search-example/issues</url>
 	</issueManagement>
 	
 	<!-- 开发人员信息 -->
@@ -39,9 +39,9 @@
 	
 	
 	<scm>
-		<url>https://github.com/sxyx2008/maven-framework-project</url>
-		<connection>scm:git:git://github.com/sxyx2008/maven-framework-project.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:sxyx2008/maven-framework-project.git</developerConnection>
+		<url>https://github.com/sxyx2008/hibernate-search-example</url>
+		<connection>scm:git:git://github.com/sxyx2008/hibernate-search-example.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:sxyx2008/hibernate-search-example.git</developerConnection>
 	</scm>
 
 
@@ -81,6 +81,7 @@
 		<logback.version>1.0.12</logback.version>
 		<IKAnalyzer.version>2012-u6</IKAnalyzer.version>
 		<paoding-analyzer.version>3.0</paoding-analyzer.version>
+		
 	</properties>
 	
  
@@ -176,7 +177,38 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
@@ -285,17 +317,6 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectjweaver.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>velocity</groupId>
-			<artifactId>velocity-dep</artifactId>
-			<version>${velocity.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>velocity</groupId>
-			<artifactId>velocity</artifactId>
-			<version>${velocity.version}</version>
 		</dependency>
 
 		<!-- SpringMVC的@ResponseBody需要使用 -->
