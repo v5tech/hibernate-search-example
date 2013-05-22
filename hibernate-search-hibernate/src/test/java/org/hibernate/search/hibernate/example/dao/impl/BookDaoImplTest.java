@@ -9,6 +9,7 @@ import net.paoding.analysis.analyzer.PaodingAnalyzer;
 import org.apache.lucene.analysis.Analyzer;
 import org.hibernate.search.hibernate.example.dao.BookDao;
 import org.hibernate.search.hibernate.example.model.Book;
+import org.hibernate.search.hibernate.example.model.QueryResult;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -31,18 +32,28 @@ public class BookDaoImplTest {
 	
 	
 	@Test
+	public void delete(){
+		bookDao.delete(11);
+	}
+	
+	
+	
+	@Test
 	public void search(){
 		int start=0;
 		int pagesize=5;
 		Analyzer analyzer=new PaodingAnalyzer();
 		String[] field=new String[]{"name","description","authors.name"};
-		List<Book> list = null;
+		QueryResult<Book> queryResult= null;
 		try {
-			list = bookDao.query("实战", start, pagesize, analyzer, field);
+			queryResult = bookDao.query("实战", start, pagesize, analyzer, field);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		for (Book book : list) {
+		
+		System.out.println("共检索到["+queryResult.getSearchresultsize()+"]条记录!");
+		
+		for (Book book : queryResult.getSearchresult()) {
 			System.out.println("书名:"+book.getName()+"\n描述:"+book.getDescription()+"\n出版日期:"+book.getPublicationDate());
 			System.out.println("----------------------------------------------------------");
 		}

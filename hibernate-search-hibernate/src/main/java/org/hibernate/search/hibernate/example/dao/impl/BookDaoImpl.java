@@ -23,6 +23,7 @@ import org.hibernate.search.Search;
 import org.hibernate.search.hibernate.example.dao.BookDao;
 import org.hibernate.search.hibernate.example.model.Author;
 import org.hibernate.search.hibernate.example.model.Book;
+import org.hibernate.search.hibernate.example.model.QueryResult;
 import org.springframework.stereotype.Repository;
 
 @Repository(value="bookDaoImpl")
@@ -41,38 +42,40 @@ public class BookDaoImpl implements BookDao {
 
 	@Override
 	public void add(Book book) {
-		this.getSessionFactory().openSession().save(book);
+		this.getSessionFactory().getCurrentSession().save(book);
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Book> query(int start, int pagesize) {
-		Session session = this.getSessionFactory().openSession();
+		Session session = this.getSessionFactory().getCurrentSession();
 		return session.createCriteria(Book.class).setFirstResult(start).setMaxResults(pagesize).list();
 	}
 
 	@Override
 	public void update(Book book) {
-		this.getSessionFactory().openSession().update(book);
+		this.getSessionFactory().getCurrentSession().update(book);
 	}
 
 	@Override
 	public void delete(Book book) {
-		this.getSessionFactory().openSession().delete(book);
+		this.getSessionFactory().getCurrentSession().delete(book);
 	}
 
 	@Override
 	public void delete(int id) {
-		Object object = this.getSessionFactory().openSession().get(Book.class, id);
-		this.getSessionFactory().openSession().delete(object);
+		Object object = this.getSessionFactory().getCurrentSession().get(Book.class, id);
+		this.getSessionFactory().getCurrentSession().delete(object);
 	}
 
 	@Override
-	public List<Book> query(String keyword, int start, int pagesize,Analyzer analyzer, String... field) throws Exception {
+	public QueryResult<Book> query(String keyword, int start, int pagesize,Analyzer analyzer,String...field) throws Exception{
+		
+		QueryResult<Book> queryResult=new QueryResult<Book>();
 		
 		List<Book> books=new ArrayList<Book>();
 		
-		Session session = this.getSessionFactory().openSession();
+		Session session = this.getSessionFactory().getCurrentSession();
 		FullTextSession fullTextSession = Search.getFullTextSession(session);
 		
 		//使用Hibernate Search api查询 从多个字段匹配 name、description、authors.name
@@ -85,6 +88,12 @@ public class BookDaoImpl implements BookDao {
 		Query luceneQuery=queryParser.parse(keyword);
 		
 		FullTextQuery fullTextQuery = fullTextSession.createFullTextQuery(luceneQuery);
+		int searchresultsize = fullTextQuery.getResultSize();
+		
+		queryResult.setSearchresultsize(searchresultsize);
+		
+		System.out.println("共查找到["+searchresultsize+"]条记录");
+		
 		fullTextQuery.setFirstResult(start);
 		fullTextQuery.setMaxResults(pagesize);
 		
@@ -98,7 +107,6 @@ public class BookDaoImpl implements BookDao {
 
 		@SuppressWarnings("unchecked")
 		List<Book> tempresult = fullTextQuery.list();
-		System.out.println("共查找到["+tempresult.size()+"]条记录");
 		for (Book book : tempresult) {
 			String highlighterString=null;
 			try {
@@ -130,8 +138,12 @@ public class BookDaoImpl implements BookDao {
 			System.out.println("----------------------------------------------------------");
 		}
 		
+		queryResult.setSearchresult(books);
+		
 		fullTextSession.close();
 		
-		return books;
+		return queryResult;
 	}
+
+	
 }

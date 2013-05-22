@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Hibernate Search Example</title>
 </head>
 <body>
 	
-	共查到[<b><font color='red'>${list.size()}</font></b>]处结果!<br/>
+	共查到[<b><font color='red'>${queryResult.searchresultsize}</font></b>]处结果!<br/>
 	
-	<c:forEach items="${list }" var="book">
+	<c:forEach items="${queryResult.searchresult }" var="book">
 		编号 :<c:out value="${book.id }"></c:out><br/>
 		书名 :<c:out value="${book.name }" escapeXml="false"></c:out><br/>
 		作者 :
@@ -21,6 +21,5 @@
 		出版日期 :<c:out value="${book.publicationDate }"></c:out><br/>
 		<hr/>
 	</c:forEach>
-	
 </body>
 </html>

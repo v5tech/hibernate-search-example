@@ -66,14 +66,10 @@
 	</bean>
     
     <!-- 数据初始化导入 -->
-	<!-- 
 	<jdbc:initialize-database data-source="hibernate4DataSource">
  		<jdbc:script location="classpath:hibernate_search.sql" encoding="GBK"/>
  	</jdbc:initialize-database> 
- 	-->
-    
-	
-	
+ 	
 	<bean id="hibernate4sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="hibernate4DataSource"></property>
@@ -84,10 +80,21 @@
 				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
 				<prop key="hibernate.jdbc.batch_size">20</prop>
 				
+				<!-- hibernate cache -->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">ehcache.xml</prop>
+				
+				<!-- hibernate search configuration -->
 				<prop key="hibernate.search.lucene_version">LUCENE_36</prop>
 				<prop key="hibernate.search.default.directory_provider">filesystem</prop>
 				<prop key="hibernate.search.default.indexBase">target/lucene/indexes</prop>
 				
+				<!-- hibernate search Index Optimization -->
+				<prop key="hibernate.search.default.optimizer.operation_limit.max">1000</prop>
+				<prop key="hibernate.search.default.optimizer.transaction_limit.max">100</prop>
 			</props>
 		</property>
 		
@@ -111,6 +118,11 @@
 
 	<bean id="hibernate4TransactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
+	</bean>
+	
+	
+	<bean class="org.hibernate.search.hibernate.example.IndexManger" depends-on="hibernate4sessionFactory">
 		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
 	</bean>
 	

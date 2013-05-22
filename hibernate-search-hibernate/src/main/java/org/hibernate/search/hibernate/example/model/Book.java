@@ -1,5 +1,8 @@
 package org.hibernate.search.hibernate.example.model;
 
+import static org.hibernate.search.annotations.FieldCacheType.CLASS;
+import static org.hibernate.search.annotations.FieldCacheType.ID;
+
 import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,6 +19,8 @@ import javax.persistence.Table;
 
 import net.paoding.analysis.analyzer.PaodingAnalyzer;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.search.annotations.Analyze;
 import org.hibernate.search.annotations.Analyzer;
 import org.hibernate.search.annotations.CacheFromIndex;
@@ -28,15 +33,13 @@ import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.search.annotations.Resolution;
 import org.hibernate.search.annotations.Store;
 
-import static org.hibernate.search.annotations.FieldCacheType.CLASS;
-import static org.hibernate.search.annotations.FieldCacheType.ID;
-
 @Entity
 @Table(catalog="hibernate_search",name="Book")
 @Indexed(index="book")
 //@Analyzer(impl=IKAnalyzer.class)
 @Analyzer(impl=PaodingAnalyzer.class)
 @CacheFromIndex( {CLASS,ID} )
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")  
 public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -58,9 +61,10 @@ public class Book {
 	@JoinTable(
 			catalog="hibernate_search",
 			name="Book_Author",
-			joinColumns={@JoinColumn(name = "book_id",nullable=false,referencedColumnName="id",table="Book")},
-			inverseJoinColumns = {@JoinColumn(name = "author_id",nullable=false,referencedColumnName="id",table="Author")}
+			joinColumns={@JoinColumn(name = "book_id")},
+			inverseJoinColumns = {@JoinColumn(name = "author_id")}
 	)
+	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Author")
 	private Set<Author> authors = new HashSet<Author>();
 
 	public Integer getId() {

@@ -1,12 +1,11 @@
 package org.hibernate.search.hibernate.example.controller;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import net.paoding.analysis.analyzer.PaodingAnalyzer;
 
 import org.hibernate.search.hibernate.example.model.Book;
+import org.hibernate.search.hibernate.example.model.QueryResult;
 import org.hibernate.search.hibernate.example.service.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -23,18 +22,24 @@ public class BookController {
 	
 	@RequestMapping("/search/{keyword}/{start}/{pagesize}")
 	public ModelAndView search(@PathVariable(value="keyword")String keyword,@PathVariable(value="start")int start,@PathVariable(value="pagesize")int pagesize){
-		List<Book> query = null;
+		QueryResult<Book> queryResult= null;
 		try {
 			
-			keyword=new String(keyword.getBytes("iso-8859-1"));
+			keyword=new String(keyword.getBytes("iso-8859-1"),"utf-8");
 			
-			query = bookService.query(keyword, start, pagesize, new PaodingAnalyzer());
+			queryResult = bookService.query(keyword, start, pagesize, new PaodingAnalyzer());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		ModelAndView modelAndView = new ModelAndView("list");
-		modelAndView.addObject("list", query);
+		modelAndView.addObject("queryResult", queryResult);
 		return modelAndView;
+	}
+	
+	
+	@RequestMapping("/delete/{id}")
+	public void search(@PathVariable(value="id")int id){
+		bookService.delete(id);
 	}
 	
 }

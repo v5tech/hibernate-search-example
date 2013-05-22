@@ -15,6 +15,7 @@
 	<name>hibernate-search-jpa</name>
 	<url>http://maven.apache.org</url>
 
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -43,6 +44,8 @@
 			<artifactId>jul-to-slf4j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+
 
 		<!-- 数据库日志记录 -->
 		<dependency>
@@ -86,7 +89,32 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
@@ -126,7 +154,12 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
@@ -152,7 +185,13 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-search-infinispan</artifactId>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+		</dependency>
+		
+		
 		<dependency>
 			<groupId>IKAnalyzer</groupId>
 			<artifactId>IKAnalyzer</artifactId>
@@ -200,7 +239,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>hibernate-search-jpa</finalName>
+		<finalName>hibernate-search-hibernate</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -225,9 +264,9 @@
 				</configuration>
 			</plugin>
 
-			<!-- 
-				maven tomcat plugin 
-				mvn tomcat:run 
+			<!-- maven tomcat plugin 
+				usage 
+			mvn tomcat:run 
 			-->
 
 			<plugin>
@@ -240,19 +279,19 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 			</plugin>
 
-			<!-- 
-				maven jetty plugin 
-				mvn jetty:run 
+			<!-- maven jetty plugin 
+				usage 
+			mvn jetty:run 
 			-->
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
 			</plugin>
 
-			<!-- 
-				maven jboss plugin 
-				第一步:mvn clean package jboss:start 清除资源、打包、启动jboss 
-				第二步:mvn jboss:hard-deploy 部署war包 
+			<!-- maven jboss plugin 
+				usage 
+			第一步:mvn clean package jboss:start 清除资源、打包、启动jboss 
+			第二步:mvn jboss:hard-deploy 部署war包 
 			-->
 
 			<plugin>
@@ -268,8 +307,7 @@
 			</plugin>
 
 
-			<!-- 
-				jboss-as-maven-plugin 
+			<!-- jboss-as-maven-plugin 
 				mvn jboss-as:deploy 
 				mvn jboss-as:run 
 			-->

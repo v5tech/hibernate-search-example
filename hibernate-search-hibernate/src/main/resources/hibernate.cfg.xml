@@ -15,5 +15,24 @@
 		<property name="hibernate.search.default.directory_provider" value="filesystem"/>
 		<property name="hibernate.search.default.indexBase" value="target/lucene/indexes"/>
 		
+		<event type="post-update">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		<event type="post-insert">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		<event type="post-delete">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		<event type="post-collection-recreate">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		<event type="post-collection-remove">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		<event type="post-collection-update">
+			<listener class="org.hibernate.search.event.FullTextIndexEventListener"/>
+		</event>
+		
     </session-factory>
 </hibernate-configuration>

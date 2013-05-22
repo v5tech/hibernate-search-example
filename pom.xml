@@ -1,21 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.hibernate.search.example</groupId>
-  <artifactId>hibernate-search-example</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
+	<groupId>org.hibernate.search.example</groupId>
+	<artifactId>hibernate-search-example</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
 
-  <name>hibernate-search-example</name>
-  <url>https://github.com/sxyx2008/hibernate-search-example</url>
+	<name>hibernate-search-example</name>
+	<url>https://github.com/sxyx2008/hibernate-search-example</url>
 
-  <!-- 问题解决信息 -->
+	<!-- 问题解决信息 -->
 	<issueManagement>
 		<system>Github</system>
-        <url>https://github.com/sxyx2008/hibernate-search-example/issues</url>
+		<url>https://github.com/sxyx2008/hibernate-search-example/issues</url>
 	</issueManagement>
-	
+
 	<!-- 开发人员信息 -->
 	<developers>
 		<developer>
@@ -36,8 +36,8 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
-	
-	
+
+
 	<scm>
 		<url>https://github.com/sxyx2008/hibernate-search-example</url>
 		<connection>scm:git:git://github.com/sxyx2008/hibernate-search-example.git</connection>
@@ -56,12 +56,12 @@
 			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
 			<name>Nexus Snapshots Repository</name>
 		</snapshotRepository>
-	</distributionManagement>	
-	
+	</distributionManagement>
+
 	<properties>
-		
+
 		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
-		
+
 		<spring.version>3.2.1.RELEASE</spring.version>
 		<hibernate.version>4.2.0.Final</hibernate.version>
 		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
@@ -81,370 +81,379 @@
 		<logback.version>1.0.12</logback.version>
 		<IKAnalyzer.version>2012-u6</IKAnalyzer.version>
 		<paoding-analyzer.version>3.0</paoding-analyzer.version>
-		
+		<ehcache.version>2.6.5</ehcache.version>
 	</properties>
-	
- 
-  <modules>
-  	<module>hibernate-search-jpa</module>
-  	<module>hibernate-search-hibernate</module>
-  </modules>
-  
-  <dependencyManagement>
-  	<dependencies>
-  		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>log4j-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		
-		<dependency>
-     		<groupId>org.slf4j</groupId>
-     		<artifactId>jul-to-slf4j</artifactId>
-     		<version>${slf4j.version}</version>
-     		<scope>runtime</scope>
-   		</dependency>
-		
-		
-		
-		<!-- 数据库日志记录 -->		
-		<dependency>
-			<groupId>p6spy</groupId>
-			<artifactId>p6spy</artifactId>
-			<version>${p6spy.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>log4jdbc</groupId>
-			<artifactId>log4jdbc</artifactId>
-			<version>${log4jdbc.version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>${jstl.version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>${javax.servlet.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>${jsp-api.version}</version>
-			<scope>provided</scope>
-		</dependency>
+	<modules>
+		<module>hibernate-search-jpa</module>
+		<module>hibernate-search-hibernate</module>
+	</modules>
 
-		<!-- springframework -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-oxm</artifactId>
-			<version>${spring.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-lang</artifactId>
-					<groupId>commons-lang</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		
-		
-		<!-- spring data jpa -->
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>${spring.data.jpa.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring-aop</artifactId>
-					<groupId>org.springframework</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-				
-		<!-- hibernate -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>${hibernate.jpa.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-		
-		<!-- hibernate-search -->
-		<dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search</artifactId>
-            <version>${hibernate-search.version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search-analyzers</artifactId>
-            <version>${hibernate-search.version}</version>
-        </dependency>
-        
-		<dependency>
-		   <groupId>org.hibernate</groupId>
-		   <artifactId>hibernate-search-infinispan</artifactId>
-		   <version>${hibernate-search.version}</version>
-		</dependency>
-		
-		<dependency>
-		  <groupId>IKAnalyzer</groupId>
-		  <artifactId>IKAnalyzer</artifactId>
-		  <version>${IKAnalyzer.version}</version>
-		</dependency>
-		
-		<dependency>
-		  <groupId>net.paoding.analysis.analyzer</groupId>
-		  <artifactId>paoding-analyzer</artifactId>
-		  <version>${paoding-analyzer.version}</version>
-		</dependency>
-		
-		<!-- Spring MVC JSR303 Bean Validation -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-				
-		<!-- 阿里数据库连接池 -->
-		<dependency>
-		  <groupId>com.alibaba</groupId>
-		  <artifactId>druid</artifactId>
-		  <version>${druid.version}</version>
-		</dependency>
-		
-		<!-- Spring MVC 要用到 -->
-		
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>${aspectjweaver.version}</version>
-		</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>runtime</scope>
+			</dependency>
 
-		<!-- SpringMVC的@ResponseBody需要使用 -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
-	
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
-		</dependency>
-		
-  	</dependencies>
-  </dependencyManagement>
-  
-  <build>
-  	<finalName>hibernate-search-example</finalName>
-  	<pluginManagement>
-  		<plugins>
-  			<plugin>
-		       <groupId>org.apache.maven.plugins</groupId>
-		       <artifactId>maven-release-plugin</artifactId>
-		       <version>2.4.1</version>
-		    </plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-	         		<artifactId>maven-compiler-plugin</artifactId>
-	         		<version>3.1</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			
-			<!-- 
-				maven tomcat plugin 
-					usage
-				mvn tomcat:run
-			-->
-			
-			<plugin>
-	          <groupId>org.apache.tomcat.maven</groupId>
-	          <artifactId>tomcat6-maven-plugin</artifactId>
-	          <version>2.0</version>
-	        </plugin>
-	        
-	        <plugin>
-	          <groupId>org.apache.tomcat.maven</groupId>
-	          <artifactId>tomcat7-maven-plugin</artifactId>
-	          <version>2.0</version>
-	        </plugin>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>runtime</scope>
+			</dependency>
 
-	        <!-- 
-				maven jetty plugin 
-					usage
-				mvn jetty:run
-			-->
-			<plugin>
-			  <groupId>org.mortbay.jetty</groupId>
-			  <artifactId>maven-jetty-plugin</artifactId>
-			  <version>6.1.10</version>
-			</plugin>
-			
-			<!-- 
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+
+
+			<!-- 数据库日志记录 -->
+			<dependency>
+				<groupId>p6spy</groupId>
+				<artifactId>p6spy</artifactId>
+				<version>${p6spy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4jdbc</groupId>
+				<artifactId>log4jdbc</artifactId>
+				<version>${log4jdbc.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${javax.servlet.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>${jsp-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- springframework -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-lang</artifactId>
+						<groupId>commons-lang</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+
+			<!-- spring data jpa -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring.data.jpa.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>spring-aop</artifactId>
+						<groupId>org.springframework</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- hibernate -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<version>${hibernate.jpa.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<!-- hibernate-search -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-search</artifactId>
+				<version>${hibernate-search.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-search-analyzers</artifactId>
+				<version>${hibernate-search.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-search-infinispan</artifactId>
+				<version>${hibernate-search.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>${ehcache.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>IKAnalyzer</groupId>
+				<artifactId>IKAnalyzer</artifactId>
+				<version>${IKAnalyzer.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.paoding.analysis.analyzer</groupId>
+				<artifactId>paoding-analyzer</artifactId>
+				<version>${paoding-analyzer.version}</version>
+			</dependency>
+
+			<!-- Spring MVC JSR303 Bean Validation -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<!-- 阿里数据库连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- Spring MVC 要用到 -->
+
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectjweaver.version}</version>
+			</dependency>
+
+			<!-- SpringMVC的@ResponseBody需要使用 -->
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-core-asl</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<finalName>hibernate-search-example</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.4.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+
+				<!-- maven tomcat plugin usage mvn tomcat:run -->
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat6-maven-plugin</artifactId>
+					<version>2.0</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.0</version>
+				</plugin>
+
+				<!-- 
+					maven jetty plugin 
+					usage 
+					mvn jetty:run 
+				-->
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>maven-jetty-plugin</artifactId>
+					<version>6.1.10</version>
+				</plugin>
+
+				<!-- 
 				maven jboss plugin 
-					usage
-				第一步:mvn clean package jboss:start 清除资源、打包、启动jboss 
-				第二步:mvn jboss:hard-deploy 部署war包
-			-->
-			
-			<plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>jboss-maven-plugin</artifactId>
-		        <version>1.5.0</version>
-		        <configuration>
-		          <hostName>localhost</hostName>
-          		  <port>8080</port>
-		          <jbossHome>D:/jboss-4.2.3.GA</jbossHome>
-		          <fileName>target/maven-framework.war</fileName>
-		          <serverName>all</serverName>
-		        </configuration>
-		     </plugin>
-		     
-		     
-		    <!-- 
-				jboss-as-maven-plugin
-				mvn jboss-as:deploy
-				mvn jboss-as:run
-			-->
-		   <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.4.Final</version>
-           </plugin>
-			
-			<!-- eclipse插件, 设定wtp版本 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<!-- 增加设置项目encoding的文件 -->
-					<additionalConfig>
-						<file>
-							<name>.settings/org.eclipse.core.resources.prefs</name>
-							<content>
+					usage 
+					第一步:mvn clean package jboss:start 清除资源、打包、启动jboss 
+					第二步:mvn jboss:hard-deploy 部署war包 
+				-->
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jboss-maven-plugin</artifactId>
+					<version>1.5.0</version>
+					<configuration>
+						<hostName>localhost</hostName>
+						<port>8080</port>
+						<jbossHome>D:/jboss-4.2.3.GA</jbossHome>
+						<fileName>target/maven-framework.war</fileName>
+						<serverName>all</serverName>
+					</configuration>
+				</plugin>
+
+
+				<!-- 
+					jboss-as-maven-plugin 
+					mvn jboss-as:deploy 
+					mvn jboss-as:run 
+				-->
+				<plugin>
+					<groupId>org.jboss.as.plugins</groupId>
+					<artifactId>jboss-as-maven-plugin</artifactId>
+					<version>7.4.Final</version>
+				</plugin>
+
+				<!-- eclipse插件, 设定wtp版本 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>false</downloadJavadocs>
+						<wtpversion>2.0</wtpversion>
+						<!-- 增加设置项目encoding的文件 -->
+						<additionalConfig>
+							<file>
+								<name>.settings/org.eclipse.core.resources.prefs</name>
+								<content>
 								<![CDATA[eclipse.preferences.version=1${line.separator}encoding/<project>=${project.build.sourceEncoding}${line.separator}]]>
-							</content>
-						</file>
-					</additionalConfig>
-				</configuration>
-			</plugin>
-			
-  		</plugins>
-  	</pluginManagement>
-  </build>
-  
+								</content>
+							</file>
+						</additionalConfig>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
 </project>

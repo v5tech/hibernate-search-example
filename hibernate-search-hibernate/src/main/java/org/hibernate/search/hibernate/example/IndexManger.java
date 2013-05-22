@@ -4,18 +4,31 @@ package org.hibernate.search.hibernate.example;
 import org.hibernate.SessionFactory;
 import org.hibernate.search.FullTextSession;
 import org.hibernate.search.Search;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.InitializingBean;
 
-
-public class IndexManger {
+/**
+ * 随着Spring容器的的创建而创建索引
+ * @author Administrator
+ *
+ */
+public class IndexManger implements InitializingBean{
 	
-	public static void main(String[] args) throws Exception{
-		
-		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
-		SessionFactory sessionFactory = applicationContext.getBean("hibernate4sessionFactory",SessionFactory.class);
-		FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.openSession());
-		fullTextSession.createIndexer().start();
+	private SessionFactory sessionFactory;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
-	
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		
+		//重建索引
+		FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.openSession());
+		
+		fullTextSession.createIndexer().startAndWait();
+	}
 }
