@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.hibernate.search.example</groupId>
@@ -16,7 +16,7 @@
 		<url>https://github.com/sxyx2008/hibernate-search-example/issues</url>
 	</issueManagement>
 
-	<!-- 开发人员信息 -->
+	<!-- �?��人员信息 -->
 	<developers>
 		<developer>
 			<id>fengjing</id>
@@ -88,7 +88,8 @@
 	<modules>
 		<module>hibernate-search-jpa</module>
 		<module>hibernate-search-hibernate</module>
-	</modules>
+    <module>hibernate-example</module>
+  </modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -127,7 +128,7 @@
 
 
 
-			<!-- 数据库日志记录 -->
+			<!-- 数据库日志记�?-->
 			<dependency>
 				<groupId>p6spy</groupId>
 				<artifactId>p6spy</artifactId>
@@ -324,7 +325,7 @@
 				<version>${druid.version}</version>
 			</dependency>
 
-			<!-- Spring MVC 要用到 -->
+			<!-- Spring MVC 要用�?-->
 
 			<dependency>
 				<groupId>org.aspectj</groupId>
@@ -332,7 +333,7 @@
 				<version>${aspectjweaver.version}</version>
 			</dependency>
 
-			<!-- SpringMVC的@ResponseBody需要使用 -->
+			<!-- SpringMVC的@ResponseBody�?��使用 -->
 			<dependency>
 				<groupId>org.codehaus.jackson</groupId>
 				<artifactId>jackson-mapper-asl</artifactId>
@@ -402,8 +403,8 @@
 				<!-- 
 				maven jboss plugin 
 					usage 
-					第一步:mvn clean package jboss:start 清除资源、打包、启动jboss 
-					第二步:mvn jboss:hard-deploy 部署war包 
+					第一�?mvn clean package jboss:start 清除资源、打包�?启动jboss 
+					第二�?mvn jboss:hard-deploy 部署war�?
 				-->
 
 				<plugin>
@@ -440,7 +441,7 @@
 						<downloadSources>true</downloadSources>
 						<downloadJavadocs>false</downloadJavadocs>
 						<wtpversion>2.0</wtpversion>
-						<!-- 增加设置项目encoding的文件 -->
+						<!-- 增加设置项目encoding的文�?-->
 						<additionalConfig>
 							<file>
 								<name>.settings/org.eclipse.core.resources.prefs</name>

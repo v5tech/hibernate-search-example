@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="hibernateCache">
+
+	<diskStore path="java.io.tmpdir/ehcache" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache maxEntriesLocalHeap="10000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600"
+		overflowToDisk="true" maxEntriesLocalDisk="100000" />
+	
+	
+	<cache
+		name="org.hibernate.cache.StandardQueryCache"
+		maxEntriesLocalHeap="5"
+		eternal="false"
+		timeToLiveSeconds="120"
+		/>
+	
+	<cache
+		name="org.hibernate.cache.UpdateTimestampsCache"
+		maxEntriesLocalHeap="5000"
+		eternal="true"
+		/>
+	
+	
+	
+	<cache name="org.hibernate.search.hibernate.example.model.Author" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+	<cache name="org.hibernate.search.hibernate.example.model.Book" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+</ehcache>

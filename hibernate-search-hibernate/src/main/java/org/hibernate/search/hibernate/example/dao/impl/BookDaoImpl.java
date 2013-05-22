@@ -47,7 +47,7 @@ public class BookDaoImpl implements BookDao {
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
 	public void add(Book book) {
-		this.getSessionFactory().getCurrentSession().saveOrUpdate(book);
+		this.getSessionFactory().getCurrentSession().persist(book);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -62,9 +62,7 @@ public class BookDaoImpl implements BookDao {
 	@Transactional(propagation=Propagation.REQUIRED)
 	public void update(Book book) {
 		Session session = this.getSessionFactory().getCurrentSession();
-		Transaction transaction = session.beginTransaction();
-		session.update(book);
-		transaction.commit();
+		session.merge(book);
 	}
 
 	@Override
@@ -80,13 +78,15 @@ public class BookDaoImpl implements BookDao {
 		Session session = this.getSessionFactory().getCurrentSession();
 		FullTextSession fullTextSession = Search.getFullTextSession(session);
 		
-		int n = this.getSessionFactory().getCurrentSession().createSQLQuery("DELETE FROM book_author WHERE book_id= "+id).executeUpdate();
+//		int n = this.getSessionFactory().getCurrentSession().createSQLQuery("DELETE FROM book_author WHERE book_id= "+id).executeUpdate();
+//		
+//		System.out.println(n);
+//		
+//		int m = this.getSessionFactory().getCurrentSession().createSQLQuery("DELETE FROM book WHERE id= "+id).executeUpdate();
+//		
+//		System.out.println(m);
 		
-		System.out.println(n);
-		
-		int m = this.getSessionFactory().getCurrentSession().createSQLQuery("DELETE FROM book WHERE id= "+id).executeUpdate();
-		
-		System.out.println(m);
+		session.delete(load(id));
 		
 		Transaction tx = fullTextSession.beginTransaction();
 		fullTextSession.purge(Book.class, id);

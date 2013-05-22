@@ -1,7 +1,4 @@
-package org.hibernate.search.hibernate.example.model;
-
-import static org.hibernate.search.annotations.FieldCacheType.CLASS;
-import static org.hibernate.search.annotations.FieldCacheType.ID;
+package org.hibernate.example.model;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -18,50 +15,23 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import net.paoding.analysis.analyzer.PaodingAnalyzer;
-
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.Boost;
-import org.hibernate.search.annotations.CacheFromIndex;
-import org.hibernate.search.annotations.DateBridge;
-import org.hibernate.search.annotations.DocumentId;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.IndexedEmbedded;
-import org.hibernate.search.annotations.Resolution;
-import org.hibernate.search.annotations.Store;
 
 @Entity
 @Table(catalog="hibernate_search",name="Book")
-@Indexed(index="book")
-//@Analyzer(impl=IKAnalyzer.class)
-@Analyzer(impl=PaodingAnalyzer.class)
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")  
-@Boost(2.0f)
-@CacheFromIndex( { CLASS, ID } )
 public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@DocumentId
 	private Integer id;
 
-	@Field(index = Index.YES, analyze = Analyze.YES, store = Store.COMPRESS)
-	@Boost(1.5f)
 	private String name;
 	
-	@Field(index = Index.YES, analyze = Analyze.YES, store = Store.COMPRESS)
-	@Boost(1.2f)
 	private String description;
 	
-	@Field(index = Index.YES, analyze = Analyze.NO, store = Store.YES)
-	@DateBridge(resolution = Resolution.DAY)
 	private Date publicationDate;
 
-	@IndexedEmbedded(depth=1)
 	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE},fetch=FetchType.EAGER)
 	@JoinTable(
 			catalog="hibernate_search",

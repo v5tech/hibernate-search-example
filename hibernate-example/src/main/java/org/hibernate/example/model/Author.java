@@ -1,4 +1,4 @@
-package org.hibernate.search.hibernate.example.model;
+package org.hibernate.example.model;
 
 import java.util.Set;
 
@@ -13,11 +13,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.ContainedIn;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
-import org.hibernate.search.annotations.Store;
 
 @Entity
 @Table(catalog="hibernate_search",name="Author")
@@ -27,11 +22,9 @@ public class Author {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 	
-	@Field(index=Index.YES,analyze=Analyze.NO,store=Store.COMPRESS)
 	private String name;
 	
 	@ManyToMany(fetch=FetchType.EAGER,mappedBy="authors",cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE})
-	@ContainedIn
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")
 	private Set<Book> books;
 	
