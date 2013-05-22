@@ -30,7 +30,7 @@ public class Author {
 	@Field(index=Index.YES,analyze=Analyze.NO,store=Store.COMPRESS)
 	private String name;
 	
-	@ManyToMany(fetch=FetchType.LAZY,mappedBy="authors",cascade={CascadeType.PERSIST,CascadeType.MERGE})
+	@ManyToMany(fetch=FetchType.EAGER,mappedBy="authors",cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
 	@ContainedIn
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")
 	private Set<Book> books;
@@ -61,4 +61,10 @@ public class Author {
 
 	public Author() {
 	}
+	
+	public Author(String name) {
+		super();
+		this.name = name;
+	}
+	
 }

@@ -28,7 +28,7 @@
 	</context:component-scan>
 	
 	<tx:annotation-driven transaction-manager="hibernate4TransactionManager"/>
-	<aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
+	<aop:aspectj-autoproxy/>
     
     <!-- 阿里 Druid数据源 -->
 	<!-- https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98 -->
@@ -66,9 +66,11 @@
 	</bean>
     
     <!-- 数据初始化导入 -->
+   
 	<jdbc:initialize-database data-source="hibernate4DataSource">
  		<jdbc:script location="classpath:hibernate_search.sql" encoding="GBK"/>
  	</jdbc:initialize-database> 
+ 	
  	
 	<bean id="hibernate4sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -98,6 +100,24 @@
 			</props>
 		</property>
 		
+		<!-- hibernate search index auto change -->
+		<!--  
+		<property name="eventListeners">
+		   <map>
+		    <entry key="post-update">
+		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
+		    </entry>
+		    <entry key="post-insert">
+		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
+		    </entry>
+		    <entry key="post-delete">
+		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
+		    </entry>
+		   </map>
+		</property>
+		-->
+		
+		
 		<property name="annotatedClasses">
 			<list>
 				<value>org.hibernate.search.hibernate.example.model.Author</value>
@@ -119,6 +139,7 @@
 	<bean id="hibernate4TransactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
+		<property name="dataSource" ref="hibernate4DataSource"></property>
 	</bean>
 	
 	
@@ -126,7 +147,7 @@
 		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
 	</bean>
 	
-	
+	<!--  
 	<tx:advice id="txAdvice" transaction-manager="hibernate4TransactionManager">
 		<tx:attributes>
 			<tx:method name="add*" propagation="REQUIRED"/>
@@ -140,5 +161,5 @@
 		<aop:pointcut expression="execution(* org.hibernate.search.hibernate.example.service..*.*(..))" id="pointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
 	</aop:config>
-	
+	-->
 </beans>

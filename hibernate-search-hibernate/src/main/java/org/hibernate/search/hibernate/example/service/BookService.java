@@ -9,6 +9,9 @@ import org.hibernate.search.hibernate.example.model.QueryResult;
 public interface BookService {
 	
 	void add(Book book);
+	
+	Book load(int id);
+	
 	List<Book> query(int start,int pagesize);
 	void update(Book book);
 	void delete(Book book);

@@ -25,10 +25,9 @@ public class IndexManger implements InitializingBean{
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		
 		//ÖØ½¨Ë÷Òý
-		FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.openSession());
+		FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.getCurrentSession());
 		
-		fullTextSession.createIndexer().startAndWait();
+		fullTextSession.createIndexer().start();
 	}
 }

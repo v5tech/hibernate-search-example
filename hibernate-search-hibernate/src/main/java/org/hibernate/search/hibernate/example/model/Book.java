@@ -3,12 +3,13 @@ package org.hibernate.search.hibernate.example.model;
 import static org.hibernate.search.annotations.FieldCacheType.CLASS;
 import static org.hibernate.search.annotations.FieldCacheType.ID;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +24,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.search.annotations.Analyze;
 import org.hibernate.search.annotations.Analyzer;
+import org.hibernate.search.annotations.Boost;
 import org.hibernate.search.annotations.CacheFromIndex;
 import org.hibernate.search.annotations.DateBridge;
 import org.hibernate.search.annotations.DocumentId;
@@ -38,8 +40,9 @@ import org.hibernate.search.annotations.Store;
 @Indexed(index="book")
 //@Analyzer(impl=IKAnalyzer.class)
 @Analyzer(impl=PaodingAnalyzer.class)
-@CacheFromIndex( {CLASS,ID} )
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")  
+@Boost(2.0f)
+@CacheFromIndex( { CLASS, ID } )
 public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -47,17 +50,19 @@ public class Book {
 	private Integer id;
 
 	@Field(index = Index.YES, analyze = Analyze.YES, store = Store.COMPRESS)
+	@Boost(1.5f)
 	private String name;
 	
 	@Field(index = Index.YES, analyze = Analyze.YES, store = Store.COMPRESS)
+	@Boost(1.2f)
 	private String description;
 	
 	@Field(index = Index.YES, analyze = Analyze.NO, store = Store.YES)
 	@DateBridge(resolution = Resolution.DAY)
 	private Date publicationDate;
 
-	@IndexedEmbedded
-	@ManyToMany(cascade=CascadeType.ALL)
+	@IndexedEmbedded(depth=1)
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE},fetch=FetchType.EAGER)
 	@JoinTable(
 			catalog="hibernate_search",
 			name="Book_Author",
