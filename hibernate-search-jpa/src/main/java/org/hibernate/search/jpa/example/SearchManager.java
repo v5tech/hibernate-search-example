@@ -3,9 +3,7 @@ package org.hibernate.search.jpa.example;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import net.paoding.analysis.analyzer.PaodingAnalyzer;
 
@@ -21,13 +19,15 @@ import org.hibernate.search.jpa.FullTextQuery;
 import org.hibernate.search.jpa.Search;
 import org.hibernate.search.jpa.example.model.Author;
 import org.hibernate.search.jpa.example.model.Book;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SearchManager {
 	
 	public static void main(String[] args) throws Exception{
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate.search");
-		EntityManager em = emf.createEntityManager();
-		FullTextEntityManager fullTextEntityManager =Search.getFullTextEntityManager(em);
+		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
+		EntityManagerFactory entityManagerFactory = applicationContext.getBean("entityManagerFactory",EntityManagerFactory.class);
+		FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(entityManagerFactory.createEntityManager());
 		
 		//使用Hibernate Search api查询 从多个字段匹配 name、description、authors.name
 //		QueryBuilder qb = fullTextEntityManager.getSearchFactory().buildQueryBuilder().forEntity(Book.class ).get();
@@ -36,7 +36,7 @@ public class SearchManager {
 		//使用lucene api查询 从多个字段匹配 name、description、authors.name
 		//使用庖丁分词器
 		MultiFieldQueryParser queryParser=new MultiFieldQueryParser(Version.LUCENE_36, new String[]{"name","description","authors.name"}, new PaodingAnalyzer());
-		Query luceneQuery=queryParser.parse("ios");
+		Query luceneQuery=queryParser.parse("实战");
 		
 		FullTextQuery fullTextQuery =fullTextEntityManager.createFullTextQuery(luceneQuery, Book.class);
 		//设置每页显示多少条
@@ -80,6 +80,9 @@ public class SearchManager {
 			System.out.println("书名:"+book.getName()+"\n描述:"+book.getDescription()+"\n出版日期:"+book.getPublicationDate());
 			System.out.println("----------------------------------------------------------");
 		}
-		em.close();
+		
+		fullTextEntityManager.close();
+		entityManagerFactory.close();
+		
 	}
 }

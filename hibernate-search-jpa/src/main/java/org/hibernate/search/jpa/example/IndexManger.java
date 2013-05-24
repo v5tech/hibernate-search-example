@@ -1,20 +1,27 @@
 package org.hibernate.search.jpa.example;
 
+
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 
 import org.hibernate.search.jpa.FullTextEntityManager;
 import org.hibernate.search.jpa.Search;
+import org.springframework.beans.factory.InitializingBean;
 
-
-public class IndexManger {
+/**
+ * @author Administrator
+ *
+ */
+public class IndexManger implements InitializingBean{
 	
-	public static void main(String[] args) throws Exception{
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate.search");
-		EntityManager em = emf.createEntityManager();
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		//ÖØ½¨Ë÷Òý
 		FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(em);
+		
 		fullTextEntityManager.createIndexer().startAndWait();
 	}
-	
 }

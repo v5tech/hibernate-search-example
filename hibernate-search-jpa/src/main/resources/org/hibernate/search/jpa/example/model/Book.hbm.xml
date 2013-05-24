@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="org.hibernate.search.jpa.example.model">
+        <class name="Book" table="Book" catalog="hibernate_search">
+            <id name="id" column="id">
+                <generator class="native"/>
+            </id>
+            <property name="name" column="name"/>
+            <property name="description" column="description"/>
+            <property name="publicationDate" column="publicationDate" type="date"/>
+
+            <set name="authors" table="Book_Author" cascade="all">
+                <key>
+                    <column name="book_id"/>
+                </key>
+                <many-to-many column="author_id" class="Author"/>
+            </set>
+        </class>
+    </hibernate-mapping>

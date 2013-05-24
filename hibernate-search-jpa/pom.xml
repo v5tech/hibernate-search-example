@@ -8,14 +8,11 @@
 		<version>1.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-
 	<artifactId>hibernate-search-jpa</artifactId>
 	<packaging>war</packaging>
-
 	<name>hibernate-search-jpa</name>
 	<url>http://maven.apache.org</url>
 
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -239,7 +236,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>hibernate-search-hibernate</finalName>
+		<finalName>hibernate-search-jpa</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

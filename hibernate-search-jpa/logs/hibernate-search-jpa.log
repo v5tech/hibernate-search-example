@@ -1,0 +1,665 @@
+17:59:13.688 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:13.693 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:13.695 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:13.696 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:13.702 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:13.703 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:13.703 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:13.704 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:13.711 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+17:59:13.718 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:59:13.748 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+17:59:13.753 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.4.xsd=org/springframework/data/repository/config/spring-repository-1.4.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.3.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.3.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/data/repository/spring-repository.xsd=org/springframework/data/repository/config/spring-repository-1.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.2.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.0.xsd=org/springframework/data/repository/config/spring-repository-1.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.1.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.1.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.5.xsd=org/springframework/data/repository/config/spring-repository-1.5.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.0.xsd}
+17:59:13.755 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.1.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.1.xsd
+17:59:13.806 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.1.xsd] in classpath: org/springframework/context/config/spring-context-3.1.xsd
+17:59:13.813 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.1.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.1.xsd
+17:59:13.828 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd] in classpath: org/springframework/jdbc/config/spring-jdbc-3.1.xsd
+17:59:13.833 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/aop/spring-aop-3.1.xsd] in classpath: org/springframework/aop/config/spring-aop-3.1.xsd
+17:59:13.839 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tx/spring-tx-3.1.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.1.xsd
+17:59:13.849 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:59:13.864 [main] DEBUG o.s.b.f.x.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/data/repository=org.springframework.data.repository.config.RepositoryNameSpaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/data/jpa=org.springframework.data.jpa.repository.config.JpaRepositoryNameSpaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+17:59:13.911 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\test-classes\org\hibernate\search\jpa\example]
+17:59:13.911 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\test-classes\org\hibernate\search\jpa\example] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/test-classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.915 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\test-classes\org\hibernate\search\jpa\example\dao] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/test-classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.915 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\test-classes\org\hibernate\search\jpa\example\dao\impl] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/test-classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.916 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example]
+17:59:13.917 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.918 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\controller] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.919 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\dao] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.919 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\dao\impl] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.921 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\model] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.922 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\service] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.923 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\service\impl] for files matching pattern [E:/developer/workspace/hibernate-search-example/hibernate-search-jpa/target/classes/org/hibernate/search/jpa/example/**/*.class]
+17:59:13.928 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/hibernate/search/jpa/example/**/*.class] to resources [file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\test-classes\org\hibernate\search\jpa\example\dao\impl\BookDaoImplTest.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\controller\BookController.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\dao\BookDao.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\dao\impl\BookDaoImpl.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\IndexManger.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\model\Author.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\model\Book.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\model\QueryResult.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\SearchManager.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\service\BookService.class], file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\service\impl\BookServiceImpl.class]]
+17:59:13.965 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\dao\impl\BookDaoImpl.class]
+17:59:14.041 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\developer\workspace\hibernate-search-example\hibernate-search-jpa\target\classes\org\hibernate\search\jpa\example\service\impl\BookServiceImpl.class]
+17:59:14.056 [main] DEBUG o.s.b.f.x.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter#173ec72]
+17:59:14.059 [main] DEBUG o.s.b.f.x.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.hibernate.search.jpa.example.IndexManger#0]
+17:59:14.098 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 20 bean definitions from location pattern [classpath:applicationContext.xml]
+17:59:14.098 [main] INFO  o.s.c.s.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@16e1fb1: startup date [Fri May 24 17:59:14 CST 2013]; root of context hierarchy
+17:59:14.099 [main] DEBUG o.s.c.s.GenericApplicationContext - Bean factory for org.springframework.context.support.GenericApplicationContext@16e1fb1: org.springframework.beans.factory.support.DefaultListableBeanFactory@76e8a7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,bookDaoImpl,bookServiceImpl,jpaDataSource,org.springframework.jdbc.datasource.init.DataSourceInitializer#0,entityManagerFactory,org.hibernate.search.jpa.example.IndexManger#0,jpaTransactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txAdvice,pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0]; root of factory hierarchy
+17:59:14.127 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:59:14.127 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:59:14.146 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+17:59:14.149 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:59:14.203 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+17:59:14.203 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+17:59:14.207 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0' to allow for resolving potential circular references
+17:59:14.233 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+17:59:14.234 [main] DEBUG o.s.core.env.MutablePropertySources - Adding [environmentProperties] PropertySource with lowest search precedence
+17:59:14.234 [main] INFO  o.s.c.s.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [jdbc.properties]
+17:59:14.235 [main] DEBUG o.s.core.env.MutablePropertySources - Adding [localProperties] PropertySource with lowest search precedence
+17:59:14.238 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'username' in [environmentProperties]
+17:59:14.239 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'username' in [systemProperties]
+17:59:14.239 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'username' in [systemEnvironment]
+17:59:14.240 [main] DEBUG o.s.c.e.SystemEnvironmentPropertySource - PropertySource [systemEnvironment] contains 'USERNAME'
+17:59:14.240 [main] DEBUG o.s.c.e.SystemEnvironmentPropertySource - PropertySource [systemEnvironment] does not contain 'username', but found equivalent 'USERNAME'
+17:59:14.240 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'username' in [systemEnvironment] with type [String] and value 'Administrator'
+17:59:14.242 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'username' in [environmentProperties] with type [String] and value 'Administrator'
+17:59:14.243 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'password' in [environmentProperties]
+17:59:14.243 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'password' in [systemProperties]
+17:59:14.243 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'password' in [systemEnvironment]
+17:59:14.243 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'password' in any property source. Returning [null]
+17:59:14.244 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'password' in [localProperties]
+17:59:14.244 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'password' in [localProperties] with type [String] and value ''
+17:59:14.244 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.url' in [environmentProperties]
+17:59:14.245 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.url' in [systemProperties]
+17:59:14.245 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.url' in [systemEnvironment]
+17:59:14.245 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'log4jdbc.url' in any property source. Returning [null]
+17:59:14.245 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.url' in [localProperties]
+17:59:14.246 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'log4jdbc.url' in [localProperties] with type [String] and value 'jdbc:log4jdbc:mysql://localhost:3306/hibernate_search'
+17:59:14.246 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.driverClassName' in [environmentProperties]
+17:59:14.246 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.driverClassName' in [systemProperties]
+17:59:14.246 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.driverClassName' in [systemEnvironment]
+17:59:14.247 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'log4jdbc.driverClassName' in any property source. Returning [null]
+17:59:14.247 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'log4jdbc.driverClassName' in [localProperties]
+17:59:14.247 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'log4jdbc.driverClassName' in [localProperties] with type [String] and value 'net.sf.log4jdbc.DriverSpy'
+17:59:14.250 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:59:14.250 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:59:14.250 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+17:59:14.250 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:59:14.251 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:59:14.251 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:59:14.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+17:59:14.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:59:14.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:59:14.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:59:14.259 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+17:59:14.259 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:59:14.259 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+17:59:14.260 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+17:59:14.260 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+17:59:14.260 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+17:59:14.260 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:59:14.261 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:59:14.261 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+17:59:14.261 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:59:14.261 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+17:59:14.262 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+17:59:14.284 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+17:59:14.295 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+17:59:14.298 [main] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@1bb9a58]
+17:59:14.301 [main] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@114b82b]
+17:59:14.307 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactory'
+17:59:14.307 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'entityManagerFactory'
+17:59:14.312 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:14.312 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:14.314 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+17:59:14.332 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+17:59:14.333 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+17:59:14.333 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.333 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.334 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' to allow for resolving potential circular references
+17:59:14.339 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'pointcut'
+17:59:14.346 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'pointcut'
+17:59:14.347 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.353 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+17:59:14.357 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.357 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.612 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+17:59:14.613 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:14.614 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.632 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'entityManagerFactory' to allow for resolving potential circular references
+17:59:14.646 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaDataSource'
+17:59:14.646 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'jpaDataSource'
+17:59:14.647 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:14.647 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:14.703 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'jpaDataSource' to allow for resolving potential circular references
+17:59:14.730 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:14.731 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:14.731 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:14.732 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:14.732 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:14.732 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:14.733 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:14.734 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:14.734 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:14.735 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:14.735 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:14.735 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:14.738 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:14.739 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:14.739 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:14.740 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:14.744 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:14.745 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:14.746 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:14.746 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:14.818 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking init method  'init' on bean with name 'jpaDataSource'
+17:59:15.150 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+1. SELECT 'x' 
+
+17:59:15.169 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:15.169 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:15.169 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:15.169 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:15.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'jpaDataSource'
+17:59:15.252 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter#173ec72'
+17:59:15.254 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:15.255 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:15.272 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.272 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.272 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.273 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.273 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.274 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.274 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.274 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.274 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.274 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.281 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.281 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.281 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.281 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.281 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.282 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.282 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.282 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.283 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.283 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.284 [main] DEBUG org.springframework.beans.BeanUtils - No property editor [org.springframework.orm.jpa.vendor.DatabaseEditor] found for type org.springframework.orm.jpa.vendor.Database according to 'Editor' suffix convention
+17:59:15.284 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:15.284 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:15.285 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:15.285 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:15.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter#173ec72'
+17:59:15.291 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.291 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.291 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.291 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.292 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.292 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.292 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.292 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.293 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.293 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.293 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.293 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.294 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.294 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.294 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.294 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.295 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:15.295 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:15.295 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:15.295 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:15.296 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'entityManagerFactory'
+17:59:15.619 [main] WARN  o.h.i.util.xml.DTDEntityResolver - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+17:59:15.658 [main] WARN  o.h.i.util.xml.DTDEntityResolver - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+17:59:16.252 [main] WARN  o.h.search.impl.ConfigContext - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+17:59:19.853 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.853 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.853 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.854 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.863 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'entityManagerFactory'
+17:59:19.864 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76e8a7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,bookDaoImpl,bookServiceImpl,jpaDataSource,org.springframework.jdbc.datasource.init.DataSourceInitializer#0,entityManagerFactory,org.hibernate.search.jpa.example.IndexManger#0,jpaTransactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txAdvice,pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+17:59:19.864 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+17:59:19.865 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'bookDaoImpl'
+17:59:19.865 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'bookDaoImpl'
+17:59:19.865 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.865 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.871 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.hibernate.search.jpa.example.dao.impl.BookDaoImpl]: PersistenceElement for private javax.persistence.EntityManager org.hibernate.search.jpa.example.dao.impl.BookDaoImpl.em
+17:59:19.872 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'bookDaoImpl' to allow for resolving potential circular references
+17:59:19.874 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'bookDaoImpl': PersistenceElement for private javax.persistence.EntityManager org.hibernate.search.jpa.example.dao.impl.BookDaoImpl.em
+17:59:19.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+17:59:19.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.889 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.889 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.889 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.889 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'bookDaoImpl'
+17:59:19.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'bookServiceImpl'
+17:59:19.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'bookServiceImpl'
+17:59:19.893 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.894 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.898 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.hibernate.search.jpa.example.service.impl.BookServiceImpl]: ResourceElement for private org.hibernate.search.jpa.example.dao.BookDao org.hibernate.search.jpa.example.service.impl.BookServiceImpl.bookDao
+17:59:19.898 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'bookServiceImpl' to allow for resolving potential circular references
+17:59:19.901 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'bookServiceImpl': ResourceElement for private org.hibernate.search.jpa.example.dao.BookDao org.hibernate.search.jpa.example.service.impl.BookServiceImpl.bookDao
+17:59:19.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'bookDaoImpl'
+17:59:19.902 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.902 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.902 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.902 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.904 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'txAdvice'
+17:59:19.904 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'txAdvice'
+17:59:19.907 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'txAdvice' to allow for resolving potential circular references
+17:59:19.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaTransactionManager'
+17:59:19.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'jpaTransactionManager'
+17:59:19.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.913 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.921 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'jpaTransactionManager' to allow for resolving potential circular references
+17:59:19.927 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+17:59:19.928 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaDataSource'
+17:59:19.929 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'jpaTransactionManager'
+17:59:19.930 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.930 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.930 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.930 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.936 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'jpaTransactionManager'
+17:59:19.936 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)'
+17:59:19.937 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.937 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.943 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.944 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.944 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.944 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.947 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)'
+17:59:19.948 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'txAdvice'
+17:59:19.948 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'txAdvice'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'bookServiceImpl'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaDataSource'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.965 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.966 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0' to allow for resolving potential circular references
+17:59:19.969 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaDataSource'
+17:59:19.969 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:19.970 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:19.970 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:19.970 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:19.971 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:19.971 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:19.971 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:19.973 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:19.973 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:19.974 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:19.974 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:19.974 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:19.974 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:19.975 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:19.975 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:19.975 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:19.976 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:19.977 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:19.977 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:19.977 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:19.978 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#1'
+17:59:19.979 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.979 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.982 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#1'
+17:59:19.982 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.983 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:19.989 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#1'
+17:59:19.989 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:19.989 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.000 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.001 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.001 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.001 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.001 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.002 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.002 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.002 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.002 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.003 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.003 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.003 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.003 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.004 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.004 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.005 [main] DEBUG org.springframework.beans.BeanUtils - No property editor [org.springframework.core.io.ResourceLoaderEditor] found for type org.springframework.core.io.ResourceLoader according to 'Editor' suffix convention
+17:59:20.013 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name '(inner bean)#1'
+17:59:20.015 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.015 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.015 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.015 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.031 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#1'
+17:59:20.050 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.050 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.050 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.051 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.051 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.052 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.052 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.052 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.056 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#1'
+17:59:20.057 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.057 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.058 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.058 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.059 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.059 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.059 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.059 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.060 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.060 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.060 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.060 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.061 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.061 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.061 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.062 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.062 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.062 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.063 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.063 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.063 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.063 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.063 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.063 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.064 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#1'
+17:59:20.071 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#2'
+17:59:20.071 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.071 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.072 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.072 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.072 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.073 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.073 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.073 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.073 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.073 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.074 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.075 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.075 [main] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+17:59:20.075 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:59:20.075 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:59:20.075 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:59:20.076 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.077 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.077 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.077 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.079 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#2'
+17:59:20.080 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0'
+17:59:20.089 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /* SQLyog 企业版 - MySQL GUI v8.14 MySQL - 5.5.12 : Database - hibernate_search ********************************************************************* 
+*/ /*!40101 SET NAMES utf8 */ 
+
+17:59:20.091 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40101 SET SQL_MODE=''*/ 
+
+17:59:20.092 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */ 
+
+17:59:20.094 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */ 
+
+17:59:20.095 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */ 
+
+17:59:20.096 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */ 
+
+17:59:20.097 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. CREATE DATABASE /*!32312 IF NOT EXISTS*/`hibernate_search` /*!40100 DEFAULT CHARACTER SET utf8 
+*/ 
+
+17:59:20.099 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. USE `hibernate_search` 
+
+17:59:20.100 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Table structure for table `author` */ DROP TABLE IF EXISTS `author` 
+
+17:59:20.195 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. CREATE TABLE `author` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) DEFAULT NULL, 
+PRIMARY KEY (`id`) ) ENGINE=INNODB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 
+
+17:59:20.265 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Data for the table `author` */ INSERT INTO `author`(`id`,`name`) VALUES (1,'潘爱民'),(2,'徐宝文'),(3,'李志'),(4,'谢孟军'),(5,'蔡斌'),(6,'陈湘萍'),(7,'佘建伟'),(8,'赵凯'),(9,'李刚'),(10,'淘宝前端团队'),(11,'武欣'),(12,'高洛峰'),(13,'刘铭'),(14,'朱舸'),(15,'周庆成'),(16,'邓强'),(17,'武海峰'),(18,'陈晓亮'),(19,'王寒'),(20,'周雪彬'),(21,'屈光辉'),(22,'周庆成') 
+
+17:59:20.285 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Table structure for table `book` */ DROP TABLE IF EXISTS `book` 
+
+17:59:20.299 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. CREATE TABLE `book` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `description` VARCHAR(255) DEFAULT 
+NULL, `name` VARCHAR(255) DEFAULT NULL, `publicationDate` DATE DEFAULT NULL, PRIMARY KEY (`id`) 
+) ENGINE=INNODB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 
+
+17:59:20.351 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Data for the table `book` */ INSERT INTO `book`(`id`,`description`,`name`,`publicationDate`) 
+VALUES (1,'《windows内核原理与实现》从操作系统原理的角度，详细解析了windows如何实现现代操作系统的各个关键部件，包括进程、线程、物理内存和虚拟内存的管理，windows中的同步和并发性支持，以及windows的i/o模型。在介绍这些关键部件时，本书直接以windows的源代码（wrk，windows 
+research kernel）为参照，因而读者可以了解像windows这样的复杂操作系统是如何在x86处理器上运行的。','Windows内核原理与实现','2013-05-13'),(2,'本书是由c语言的设计者brian 
+w. kernighan和dennis m. ritchie编写的一部介绍标准c语言及其程序设计方法的权威性经典著作。全面、系统地讲述了c语言的各个特性及程序设计的基本方法，包括基本概念、类型和表达式、控制流、函数与程序结构、指针与数组、结构、输入与输出、unix系统接口、标准库等内容。\r\n　　本书的讲述深入浅出，配合典型例证，通俗易懂，实用性强，适合作为大专院校计算机专业或非计算机专业的c语言教材，也可以作为从事计算机相关软硬件开发的技术人员的参考书。 
+在计算机发展的历','C程序设计语言(第2版·新版)','2003-11-07'),(3,'《go web编程》介绍如何用go语言进行web应用的开发，将go语言的特性与web开发实战组合到一起，帮读者成功地构建跨平台的应用程序，节省go语言开发web的宝贵时间。有了这些针对真实问题的解决方案放在手边，大多数编程难题都会迎刃而解。\r\n　　 
+在《go web编程》中，读者可以更加方便地找到各种编程问题的解决方案，内容涵盖文本处理、表单处理、session管理、数据库交互、加/解密、国际化和标准化，以及程序的部署维护等运维方面的知识，最后还介绍了一个快速开发的框架帮助您迅速进入go语言的web开发。','Go 
+Web编程','2013-05-13'),(4,'“hadoop技术内幕”共两册，分别从源代码的角度对“common+hdfs”和mapreduce的架构设计与实现原理进行了极为详细的分析。《hadoop技术内幕：深入解析hadoop 
+common和hdfs架构设计与实现原理》由腾讯数据平台的资深hadoop专家、x-rime的作者亲自执笔，对common和hdfs的源代码进行了分析，旨在为hadoop的优化、定制和扩展提供原理性的指导。除此之外，本书还从源代码实现中对分布式技术的精髓、分布式系统设计的优秀思想和方法，以及java语言的编码技巧、编程规范','Hadoop技术内幕：深入解析Hadoop 
+Common和HDFS架构设计与实现原理','2013-04-22'),(5,'《Android 4高级编程(第3版)》由Android权威专家编写，涵盖了所有最新的内容，是学习使用Android 
+4 SDK开发移动应用程序的理想指南。本书见解深刻，帮助经验丰富的Android开发人员充分挖掘Android 4的新特性的潜力，同时讲解了Android开发的基础知识，使初学者也可以借助本书入门。作为一本以实用性为目的的指导图书，本书带领您逐步完成复杂程度越来越高的Android项目，每个项目中都引入一种新的Android平台特性，并着重指出有助于编写引人入胜的应用程序的技术和最佳实践。','Android 
+4高级编程(第3版)','2013-04-23'),(6,'移动互联网已经成为当今世界发展最快、市场潜力最大、前景最诱人的业务，而android则是移动互联网上市场占有率最高的平台（已远超ios，最新统计数据：android占53.7%，ios占35%）；与此同时，android应用选择了java作为其开发语言，这对于java来说也是一次极好的机会。 
+本书是《疯狂android讲义》的第2版。本书基于最新的android 4.2，android sdk、adt都基于android 4.2，书中每个案例、每个截图都全面升级到android 
+4.2。本书全面地介绍了a','疯狂Android讲义(第2版)','2013-03-15'),(7,'《javascript权威指南(第6版)》要讲述的内容涵盖javascript语言本身，以及web浏览器所实现的javascript 
+api。本书第6版涵盖了 html5 和 ecmascript 5，很多章节完全重写，增加了当今 web 开发的最佳实践的内容，新增的章节包括 jquery 、服务器端 javascript、图形编程以及javascript式的面向对象。本书不仅适合初学者系统学习，也适合有经验的 
+javascript 开发者随手翻阅。','JavaScript权威指南(第6版)','2012-05-07'),(8,'本书将php开发与mysql应用相结合，分别对php和mysql做了深入浅出的分析，不仅介绍php和mysql的一般概念，而且对php和mysql的web应用做了较全面的阐述，并包括几个经典且实用的例子。\r\n　　 
+本书是第4版，经过了全面的更新、重写和扩展，包括php 5.3最新改进的特性（例如，更好的错误和异常处理），mysql的存储过程和存储引擎，ajax技术与web 2.0以及web应用需要注意的安全问题。 
+\r\n　　 php平ieimysql是非常流行的开源技术，它们非常适合快速开发数据库驱动的we','PHP和MySQL Web开发(原书第4版)','2009-04-15'),(9,'php是开发web应用系统最理想的工具，易于使用、功能强大、成本低廉、高安全性、开发速度快且执行灵活。全书以实用为目标设计，包含php开发最主流的各项技术，对每一个知识点都进行了深入详细的讲解，并附有大量的实例代码，图文并茂。系统地介绍了php的相关技术及其在实际web开发中的应用。\r\n　　 
+《细说php(第2版)》共六个部分，分为30个章节，每一章都是php独立知识点的总结。内容涵盖了动态网站开发的前台技术（html+css）、php编程语言的语法、php的常用功能模块和实用技巧、mysql数据库的设计','细说PHP(第2版)','2012-10-08'),(10,'《ios 
+6应用开发实战》是目前ios 6领域最全面系统和易于阅读的著作之一，有两大特点：第一，技术新颖，基于最新ios 6技术撰写，系统讲解开发iphone和ipad应用所需掌握的基础技术和高级技巧，以及其流程和方法；第二，易于阅读，从认知学角度进行内容规划，一个案例贯穿全书，不仅能从很大程度上降低学习的时间成本，降低阅读门槛，而且能至始至终让读者在动手实践中保持学习的热情，坚持把这《ios 
+6应用开发实战》读完。\r\n　　 全书共22章，可分为两个部分：基础部分（1~13章）分别介绍了开发ios应用前应','iOS 6应用开发实战','2013-04-25'),(11,'ios 
+平台不断发展变化，本书基于此进行了全面更新，分4 部分深入介绍ios 6 开发。第一部分主要介绍ios 6 新功能。第二部分带你熟练掌握常用工具（含表视图通知和动画图层），内容涉及cocoa 
+设计模式与苹果利用其解决问题的思路、通过objective-c 的arc 管理内存、正确使用表视图（含解决无限滚动等问题）、集合视图与自动布局、自定义绘图、视图动画与core animation 
+框架、错误处理、位置服务。第三部分介绍特定情况下要使用的工具与相关技术，涉及表视图、多任务、rest 式服务、安全','iOS 6编程实战','2013-04-08'),(12,'《cocos2d权威指南》是目前cocos2d领域内容最全面、系统和深入的一本著作，也是技术版本最新的一本著作。由国内ios和cocos2d领域的先驱和资源专家撰写，不仅系统讲解了cocos2d的使用方法、技术要点、工作原理、高级知识、开发技巧、最佳实践和性能优化，而且通过精心设计的典型案例详细讲解了cocos2d游戏设计与开发的完整过程，极具启发性和可操作性。 
+此外，还介绍了如何进行应用的测试与发布，以及cocos3d、cocos2d-x、cocos2d-html5、cocos2d-python等衍生技','Cocos2D权威指南','2013-03-22'),(13,'ObjectiveC 
+是扩展C 的面向对象编程语言，也是iPhone 开发用到的主要语言。《ObjectiveC基础教程(第2版)》结合理论知识与示例程序，全面而系统地介绍了ObjectiveC 编程的相关内容，包括ObjectiveC 
+在C 的基础上引入的特性、Cocoa 工具包的功能及框架，以及继承、复合、源文件组织等众多重要的面向对象编程技术。附录中还介绍了如何从其他语言过渡到ObjectiveC。 \r\n　　《ObjectiveC基础教程(第2版)》适合各类开发人员阅读。 
+','ObjectiveC基础教程(第2版)','2013-04-28') 
+
+17:59:20.374 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Table structure for table `book_author` */ DROP TABLE IF EXISTS `book_author` 
+
+17:59:20.394 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. CREATE TABLE `book_author` ( `book_id` INT(11) NOT NULL, `author_id` INT(11) NOT NULL, PRIMARY 
+KEY (`book_id`,`author_id`), KEY `FK1A9A0FA19890A7DF` (`author_id`), KEY `FK1A9A0FA119C4805F` 
+(`book_id`), CONSTRAINT `FK1A9A0FA119C4805F` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`), 
+CONSTRAINT `FK1A9A0FA19890A7DF` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ) ENGINE=INNODB 
+DEFAULT CHARSET=utf8 
+
+17:59:20.457 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*Data for the table `book_author` */ INSERT INTO `book_author`(`book_id`,`author_id`) VALUES 
+(1,1),(2,2),(2,3),(3,4),(4,5),(4,6),(5,7),(5,8),(6,9),(7,10),(8,11),(9,12),(10,13),(10,14),(11,15),(11,16),(11,17),(11,18),(12,19),(12,20),(12,21),(13,22) 
+
+17:59:20.476 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40101 SET SQL_MODE=@OLD_SQL_MODE */ 
+
+17:59:20.478 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */ 
+
+17:59:20.479 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */ 
+
+17:59:20.481 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_execute(FilterChainImpl.java:2487)
+1. /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */ 
+
+17:59:20.482 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.482 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.482 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.482 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.484 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0'
+17:59:20.484 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+17:59:20.485 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+17:59:20.485 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.hibernate.search.jpa.example.IndexManger#0'
+17:59:20.485 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.hibernate.search.jpa.example.IndexManger#0'
+17:59:20.486 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:20.486 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:20.486 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.hibernate.search.jpa.example.IndexManger]: PersistenceElement for private javax.persistence.EntityManager org.hibernate.search.jpa.example.IndexManger.em
+17:59:20.486 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.hibernate.search.jpa.example.IndexManger#0' to allow for resolving potential circular references
+17:59:20.489 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'org.hibernate.search.jpa.example.IndexManger#0': PersistenceElement for private javax.persistence.EntityManager org.hibernate.search.jpa.example.IndexManger.em
+17:59:20.489 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+17:59:20.489 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.hibernate.search.jpa.example.IndexManger#0'
+17:59:20.641 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+2. SELECT 'x' 
+
+17:59:20.657 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+3. SELECT 'x' 
+
+17:59:20.675 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+4. SELECT 'x' 
+
+17:59:20.687 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+5. SELECT 'x' 
+
+17:59:20.700 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+6. SELECT 'x' 
+
+17:59:20.709 [Druid-ConnectionPool-Create] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.statement_executeQuery(FilterChainImpl.java:2361)
+7. SELECT 'x' 
+
+17:59:20.763 [Hibernate Search: identifierloader-1] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+7. select count(*) as y0_ from hibernate_search.Book this_ 
+
+17:59:20.780 [Hibernate Search: identifierloader-1] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+7. select this_.id as y0_ from hibernate_search.Book this_ 
+
+17:59:20.800 [Hibernate Search: entityloader-2] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+5. select this_.id as id1_2_0_, this_.name as name2_2_0_, this_.description as descript3_2_0_, 
+this_.publicationDate as publicat4_2_0_ from hibernate_search.Book this_ where this_.id in 
+(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) 
+
+17:59:20.819 [Hibernate Search: entityloader-1] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+6. select this_.id as id1_2_0_, this_.name as name2_2_0_, this_.description as descript3_2_0_, 
+this_.publicationDate as publicat4_2_0_ from hibernate_search.Book this_ where this_.id in 
+(11, 12, 13) 
+
+17:59:20.875 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=1 
+
+17:59:20.875 [Hibernate Search: collectionsloader-3] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+1. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=11 
+
+17:59:20.922 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=2 
+
+17:59:20.924 [Hibernate Search: collectionsloader-3] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+1. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=12 
+
+17:59:20.927 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=3 
+
+17:59:20.936 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=4 
+
+17:59:20.938 [Hibernate Search: collectionsloader-3] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+1. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=13 
+
+17:59:20.946 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=5 
+
+17:59:20.953 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=6 
+
+17:59:20.958 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=7 
+
+17:59:20.961 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=8 
+
+17:59:20.965 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=9 
+
+17:59:20.976 [Hibernate Search: collectionsloader-4] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select authors0_.book_id as book1_2_1_, authors0_.author_id as author2_0_1_, author1_.id as 
+id1_1_0_, author1_.name as name2_1_0_ from Book_Author authors0_ inner join hibernate_search.Author 
+author1_ on authors0_.author_id=author1_.id where authors0_.book_id=10 
+
+17:59:21.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:21.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:21.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:21.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:21.265 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.hibernate.search.jpa.example.IndexManger#0'
+17:59:21.265 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaTransactionManager'
+17:59:21.265 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+17:59:21.265 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+17:59:21.266 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+17:59:21.266 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+17:59:21.266 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+17:59:21.268 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+17:59:21.270 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+17:59:21.271 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+17:59:21.271 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:21.272 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txAdvice'
+17:59:21.272 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:21.272 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:59:21.275 [main] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1e75e08]
+17:59:21.275 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+17:59:21.278 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+17:59:21.279 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+17:59:21.279 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+17:59:21.286 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'org.hibernate.search.jpa.example.dao.impl.BookDaoImplTest': ResourceElement for private org.hibernate.search.jpa.example.dao.BookDao org.hibernate.search.jpa.example.dao.impl.BookDaoImplTest.bookDao
+17:59:21.286 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'bookDaoImpl'
+17:59:21.291 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'org.hibernate.search.jpa.example.dao.impl.BookDaoImplTest': AutowiredMethodElement for public void org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests.setDataSource(javax.sql.DataSource)
+17:59:21.293 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaDataSource'
+17:59:21.293 [main] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'org.hibernate.search.jpa.example.dao.impl.BookDaoImplTest' to bean named 'jpaDataSource'
+17:59:21.303 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:21.303 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:21.304 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+17:59:21.304 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+17:59:21.306 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+17:59:21.314 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jpaTransactionManager'
+17:59:21.695 [main] DEBUG jdbc.sqlonly -  com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2712)
+2. select book0_.id as id1_2_, book0_.name as name2_2_, book0_.description as descript3_2_, book0_.publicationDate 
+as publicat4_2_ from hibernate_search.Book book0_ limit 5, 5 
+
+17:59:21.704 [Thread-2] INFO  o.s.c.s.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@16e1fb1: startup date [Fri May 24 17:59:14 CST 2013]; root of context hierarchy
+17:59:21.705 [Thread-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+17:59:21.705 [Thread-2] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76e8a7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,bookDaoImpl,bookServiceImpl,jpaDataSource,org.springframework.jdbc.datasource.init.DataSourceInitializer#0,entityManagerFactory,org.hibernate.search.jpa.example.IndexManger#0,jpaTransactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txAdvice,pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+17:59:21.705 [Thread-2] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0'
+17:59:21.706 [Thread-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#1': [(inner bean)#1, org.springframework.jdbc.datasource.init.DataSourceInitializer#0]
+17:59:21.706 [Thread-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)': [txAdvice]
+17:59:21.706 [Thread-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Retrieved dependent beans for bean 'bookDaoImpl': [org.hibernate.search.jpa.example.dao.impl.BookDaoImplTest]
+17:59:21.707 [Thread-2] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'entityManagerFactory'
+17:59:21.709 [Thread-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter#173ec72': [entityManagerFactory]
+17:59:21.709 [Thread-2] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy method 'close' on bean with name 'jpaDataSource'
