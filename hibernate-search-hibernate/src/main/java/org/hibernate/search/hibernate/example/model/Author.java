@@ -2,7 +2,6 @@ package org.hibernate.search.hibernate.example.model;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.search.annotations.Analyze;
@@ -30,9 +30,10 @@ public class Author {
 	@Field(index=Index.YES,analyze=Analyze.NO,store=Store.COMPRESS)
 	private String name;
 	
-	@ManyToMany(fetch=FetchType.EAGER,mappedBy="authors",cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE})
+	@ManyToMany(fetch=FetchType.LAZY,mappedBy="authors"/*,cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE}*/)
 	@ContainedIn
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region="org.hibernate.search.hibernate.example.model.Book")
+	@JsonIgnore
 	private Set<Book> books;
 	
 	public Integer getId() {

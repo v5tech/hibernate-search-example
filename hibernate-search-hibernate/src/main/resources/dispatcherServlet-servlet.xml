@@ -27,6 +27,9 @@
 	</context:component-scan>
 	
 	<mvc:annotation-driven />
+	<mvc:view-controller path="/" view-name="redirect:/query/0/20"/>
+	
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
 	
 	<!-- 处理jsp视图 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

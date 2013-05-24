@@ -62,7 +62,7 @@ public class Book {
 	private Date publicationDate;
 
 	@IndexedEmbedded(depth=1)
-	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE},fetch=FetchType.EAGER)
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE},fetch=FetchType.LAZY)
 	@JoinTable(
 			catalog="hibernate_search",
 			name="Book_Author",

@@ -1,5 +1,6 @@
 package org.hibernate.search.hibernate.example.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +17,9 @@ import org.hibernate.search.hibernate.example.service.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -24,11 +28,11 @@ public class BookController {
 	@Resource(name="bookServiceImpl")
 	private BookService bookService;
 	
-	@RequestMapping("/search/{keyword}/{start}/{pagesize}")
-	public ModelAndView search(@PathVariable(value="keyword")String keyword,@PathVariable(value="start")int start,@PathVariable(value="pagesize")int pagesize){
+	@RequestMapping("/search")
+	public ModelAndView search(@RequestParam(value="keyword")String keyword,@RequestParam(value="start")int start,@RequestParam(value="pagesize")int pagesize){
 		QueryResult<Book> queryResult= null;
 		try {
-			
+			keyword=keyword==null?"":keyword.trim();
 			keyword=new String(keyword.getBytes("iso-8859-1"),"utf-8");
 			
 			queryResult = bookService.query(keyword, start, pagesize, new PaodingAnalyzer());
@@ -39,8 +43,6 @@ public class BookController {
 		modelAndView.addObject("queryResult", queryResult);
 		return modelAndView;
 	}
-	
-	
 	
 	
 	@RequestMapping("/query/{start}/{pagesize}")
@@ -62,53 +64,88 @@ public class BookController {
 	
 	
 	@RequestMapping("/delete/{id}")
-	public ModelAndView delete(@PathVariable(value="id")int id){
+	@ResponseBody
+	public String delete(@PathVariable(value="id")int id){
 		
-		bookService.delete(id);
+		try {
+			bookService.delete(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "删除失败,"+e.getMessage();
+		}
 		
-		return query(0, 5);
-		
-	}
-	
-	
-	@RequestMapping("/save")
-	public void save(){
-		Book book = new Book();
-		
-		book.setName("研磨设计模式");
-		book.setPublicationDate(new Date());
-		book.setDescription("《研磨设计模式》完整覆盖gof讲述的23个设计模式并加以细细研磨。初级内容从基本讲起，包括每个模式的定义、功能、思路、结构、基本实现、运行调用顺序、基本应用示例等，让读者能系统、完整、准确地掌握每个模式，培养正确的“设计观”；中高级内容则深入探讨如何理解这些模式，包括模式中蕴涵什么样的设计思想，模式的本质是什么，模式如何结合实际应用，模式的优缺点以及与其他模式的关系等，以期让读者尽量去理解和掌握每个设计模式的精髓所在。");
-		
-		Set<Author> authors=new HashSet<Author>();
-		
-		authors.add(new Author("陈臣"));
-		authors.add(new Author("王斌"));
-		
-		book.setAuthors(authors);
-		
-		bookService.add(book);
+		return "删除成功!";
 		
 	}
 	
 	
+	@RequestMapping(value="/save",method={RequestMethod.POST})
+	@ResponseBody
+	public String save(@RequestParam("name")String name,@RequestParam("description")String description,@RequestParam("author")String[] author) throws UnsupportedEncodingException{
+		try {
+			Book book = new Book();
+			
+			book.setName(name);
+			book.setPublicationDate(new Date());
+			book.setDescription(description);
+			
+			Set<Author> authors=new HashSet<Author>();
+			
+			if(author!=null&&author.length>0){
+				for (int i = 0; i < author.length; i++) {
+					authors.add(new Author(author[i]));
+				}
+			}
+			
+			book.setAuthors(authors);
+			
+			bookService.add(book);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "保存失败,"+e.getMessage();
+		}
+		
+		return "保存成功!";
+	}
 	
-	@RequestMapping("/modify/{id}")
-	public void modify(@PathVariable(value="id")int id){
+	
+	
+	@RequestMapping(value="/modify",method={RequestMethod.POST})
+	@ResponseBody
+	public String modify(@RequestParam("id")String id,@RequestParam("name")String name,@RequestParam("description")String description,@RequestParam("author")String[] author) throws UnsupportedEncodingException{
+		try {
+			Book book = new Book();
+			book.setId(Integer.valueOf(id));
+			book.setName(name);
+			book.setPublicationDate(new Date());
+			book.setDescription(description);
+			
+			Set<Author> authors=new HashSet<Author>();
+			
+			if(author!=null&&author.length>0){
+				for (int i = 0; i < author.length; i++) {
+					authors.add(new Author(author[i]));
+				}
+			}
+			
+			book.setAuthors(authors);
+			
+			bookService.update(book);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			return "修改失败,"+e.getMessage();
+		}
+		return "修改成功!";
+	}
+	
+	
+	
+	
+	@RequestMapping("/load/{id}")
+	@ResponseBody
+	public Book load(@PathVariable(value="id")int id){
 		Book book = bookService.load(id);
-		
-		book.setName("研磨设计模式");
-		book.setPublicationDate(new Date());
-		book.setDescription("《研磨设计模式》完整覆盖gof讲述的23个设计模式并加以细细研磨。初级内容从基本讲起，包括每个模式的定义、功能、思路、结构、基本实现、运行调用顺序、基本应用示例等，让读者能系统、完整、准确地掌握每个模式，培养正确的“设计观”；中高级内容则深入探讨如何理解这些模式，包括模式中蕴涵什么样的设计思想，模式的本质是什么，模式如何结合实际应用，模式的优缺点以及与其他模式的关系等，以期让读者尽量去理解和掌握每个设计模式的精髓所在。");
-		
-		Set<Author> authors=book.getAuthors();
-		authors.clear();
-		authors.add(new Author("陈臣"));
-		authors.add(new Author("王斌"));
-		
-		book.setAuthors(authors);
-		
-		bookService.update(book);
-		
+		return book;
 	}
 	
 }

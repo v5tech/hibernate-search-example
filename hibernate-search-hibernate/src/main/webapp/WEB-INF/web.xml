@@ -42,12 +42,12 @@
 			<param-name>sessionFactoryBeanName</param-name>
 			<param-value>hibernate4sessionFactory</param-value>
 		</init-param>
-		<!--  
+		 
 		<init-param>
 			<param-name>singleSession</param-name>
 			<param-value>true</param-value>
 		</init-param>
-		-->
+		
 		<init-param>
 			<param-name>flushMode</param-name>
 			<param-value>AUTO</param-value>
@@ -135,7 +135,9 @@
             30
         </session-timeout>
     </session-config>
+    <!-- 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
+    </welcome-file-list> 
+    -->
 </web-app>
