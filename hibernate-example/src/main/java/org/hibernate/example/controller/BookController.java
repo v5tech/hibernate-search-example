@@ -1,4 +1,4 @@
-package org.hibernate.search.hibernate.example.controller;
+package org.hibernate.example.controller;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -7,57 +7,30 @@ import java.util.Set;
 
 import javax.annotation.Resource;
 
-import net.paoding.analysis.analyzer.PaodingAnalyzer;
-
-import org.hibernate.search.hibernate.example.model.Author;
-import org.hibernate.search.hibernate.example.model.Book;
-import org.hibernate.search.hibernate.example.model.QueryResult;
-import org.hibernate.search.hibernate.example.service.BookService;
+import org.hibernate.example.model.Author;
+import org.hibernate.example.model.Book;
+import org.hibernate.example.service.BookService;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@Service
 public class BookController {
 	
 	@Resource(name="bookServiceImpl")
 	private BookService bookService;
 	
-	@RequestMapping("/search/{keyword}/{start}/{pagesize}")
-	public ModelAndView search(@PathVariable(value="keyword")String keyword,@PathVariable(value="start")int start,@PathVariable(value="pagesize")int pagesize){
-		QueryResult<Book> queryResult= null;
-		try {
-			
-			keyword=new String(keyword.getBytes("iso-8859-1"),"utf-8");
-			
-			queryResult = bookService.query(keyword, start, pagesize, new PaodingAnalyzer());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		ModelAndView modelAndView = new ModelAndView("list");
-		modelAndView.addObject("queryResult", queryResult);
-		return modelAndView;
-	}
-	
-	
-	
-	
 	@RequestMapping("/query/{start}/{pagesize}")
 	public ModelAndView query(@PathVariable(value="start")int start,@PathVariable(value="pagesize")int pagesize){
-		QueryResult<Book> queryResult = null;
+		List<Book> lists = null;
 		try {
-			List<Book> lists = bookService.query(start, pagesize);
-			queryResult= new QueryResult<Book>();
-			queryResult.setSearchresultsize(lists.size());
-			queryResult.setSearchresult(lists);
+			lists = bookService.query(start, pagesize);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		ModelAndView modelAndView = new ModelAndView("list");
-		modelAndView.addObject("queryResult", queryResult);
+		modelAndView.addObject("lists", lists);
 		return modelAndView;
 	}
 	

@@ -10,6 +10,7 @@ import org.hibernate.example.service.BookService;
 import org.springframework.stereotype.Service;
 
 @Service(value="bookServiceImpl")
+//@Transactional(propagation=Propagation.REQUIRED)
 public class BookServiceImpl implements BookService {
 
 	@Resource(name="bookDaoImpl")

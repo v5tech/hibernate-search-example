@@ -28,7 +28,7 @@
 	</context:component-scan>
 	
 	<tx:annotation-driven transaction-manager="hibernate4TransactionManager"/>
-	<aop:aspectj-autoproxy/>
+	
     
     <!-- 阿里 Druid数据源 -->
 	<!-- https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98 -->
@@ -72,8 +72,7 @@
  	</jdbc:initialize-database> 
  	
  	
-	<bean id="hibernate4sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	<bean id="hibernate4sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="hibernate4DataSource"></property>
 		<property name="hibernateProperties">
 			<props>
@@ -100,30 +99,20 @@
 			</props>
 		</property>
 		
-		<!-- hibernate search index auto change -->
-		<!--  
-		<property name="eventListeners">
-		   <map>
-		    <entry key="post-update">
-		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
-		    </entry>
-		    <entry key="post-insert">
-		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
-		    </entry>
-		    <entry key="post-delete">
-		     <bean class="org.hibernate.search.event.FullTextIndexEventListener" />
-		    </entry>
-		   </map>
+		<property name="packagesToScan">
+			<list>
+				<value>org.hibernate.search.hibernate.example.model</value>
+			</list>
 		</property>
-		-->
-		
-		
+
+		<!--   		
 		<property name="annotatedClasses">
 			<list>
 				<value>org.hibernate.search.hibernate.example.model.Author</value>
 				<value>org.hibernate.search.hibernate.example.model.Book</value>
 			</list>
 		</property>
+		-->
 		
 		<!-- 
 			<property name="mappingResources">
@@ -136,8 +125,7 @@
 		
 	</bean>
 
-	<bean id="hibernate4TransactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	<bean id="hibernate4TransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
 		<property name="dataSource" ref="hibernate4DataSource"></property>
 	</bean>
@@ -148,6 +136,9 @@
 	</bean>
 	
 	<!--  
+	
+	<aop:aspectj-autoproxy/>
+	
 	<tx:advice id="txAdvice" transaction-manager="hibernate4TransactionManager">
 		<tx:attributes>
 			<tx:method name="add*" propagation="REQUIRED"/>
