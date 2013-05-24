@@ -8,9 +8,11 @@ import org.hibernate.example.dao.BookDao;
 import org.hibernate.example.model.Book;
 import org.hibernate.example.service.BookService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service(value="bookServiceImpl")
-//@Transactional(propagation=Propagation.REQUIRED)
+@Transactional(propagation=Propagation.REQUIRED)
 public class BookServiceImpl implements BookService {
 
 	@Resource(name="bookDaoImpl")

@@ -123,6 +123,9 @@
 	<aop:aspectj-autoproxy expose-proxy="true"/>
 	<tx:annotation-driven transaction-manager="hibernate4TransactionManager"/>
 	
+	<!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->
+	
+	<!--  
 	<tx:advice id="txAdvice" transaction-manager="hibernate4TransactionManager">
 		<tx:attributes>
 			<tx:method name="save*" propagation="REQUIRED" />  
@@ -135,7 +138,6 @@
 	        <tx:method name="remove*" propagation="REQUIRED" />  
 	        <tx:method name="put*" propagation="REQUIRED" />  
 	        <tx:method name="use*" propagation="REQUIRED"/>  
-	        <!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->  
 	        <tx:method name="get*" propagation="REQUIRED" read-only="true" />  
 	        <tx:method name="count*" propagation="REQUIRED" read-only="true" />  
 	        <tx:method name="find*" propagation="REQUIRED" read-only="true" />  
@@ -150,5 +152,5 @@
 		<aop:pointcut expression="execution(* org.hibernate.example.service.*.*(..))" id="pointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
 	</aop:config>
-	
+	-->
 </beans>
