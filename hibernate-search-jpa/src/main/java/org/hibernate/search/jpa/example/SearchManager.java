@@ -51,7 +51,7 @@ public class SearchManager {
 
 		@SuppressWarnings("unchecked")
 		List<Book> resultList = fullTextQuery.getResultList();
-		System.out.println("共查找到["+resultList.size()+"]条记录");
+		
 		for (Book book : resultList) {
 			String highlighterString=null;
 			Analyzer analyzer=new PaodingAnalyzer();
@@ -77,8 +77,6 @@ public class SearchManager {
 			} catch (Exception e) {
 			}
 			
-			System.out.println("书名:"+book.getName()+"\n描述:"+book.getDescription()+"\n出版日期:"+book.getPublicationDate());
-			System.out.println("----------------------------------------------------------");
 		}
 		
 		fullTextEntityManager.close();

@@ -67,16 +67,42 @@
 	<jdbc:initialize-database data-source="jpaDataSource">
  		<jdbc:script location="classpath:hibernate_search.sql" encoding="GBK"/>
  	</jdbc:initialize-database> 
- 	
+
  	
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="hibernate-search-jpa" />
+		<property name="persistenceUnitName" value="hibernate-search-jpa"></property>
 		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml"></property>
 		<property name="dataSource" ref="jpaDataSource"></property>
+		<property name="jpaDialect" >
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"></bean>
+		</property>
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="database" value="MYSQL"></property>
 			</bean>
+		</property>
+		
+		<property name="jpaProperties">
+			<props>
+				<!-- hibernate cache -->
+				<prop key="hibernate.cache.use_query_cache" >true</prop>
+				<prop key="hibernate.cache.use_second_level_cache" >true</prop>
+				<prop key="hibernate.cache.provider_class" >org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.region.factory_class" >org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="net.sf.ehcache.configurationResourceName" >/ehcache.xml</prop>
+				
+				<prop key="hibernate.dialect" >org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+				<prop key="hibernate.jdbc.batch_size" >20</prop>
+				
+				<!-- hibernate search configuration -->
+				<prop key="hibernate.search.lucene_version" >LUCENE_36</prop>
+				<prop key="hibernate.search.default.directory_provider" >filesystem</prop>
+				<prop key="hibernate.search.default.indexBase" >target/lucene/indexes</prop>
+				
+				<!-- hibernate search Index Optimization -->
+				<prop key="hibernate.search.default.optimizer.operation_limit.max" >1000</prop>
+				<prop key="hibernate.search.default.optimizer.transaction_limit.max" >100</prop>
+			</props>
 		</property>
 		
 		<property name="packagesToScan">
@@ -126,8 +152,8 @@
 	        <tx:method name="del*" propagation="REQUIRED" />  
 	        <tx:method name="remove*" propagation="REQUIRED" />  
 	        <tx:method name="put*" propagation="REQUIRED" />  
-	        <tx:method name="use*" propagation="REQUIRED"/>  
-	        <!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->  
+	        <tx:method name="use*" propagation="REQUIRED" />  
+	        <!--hibernate4必须配置为开启事务否则 getCurrentSession()获取不到-->  
 	        <tx:method name="get*" propagation="REQUIRED" read-only="true" />  
 	        <tx:method name="count*" propagation="REQUIRED" read-only="true" />  
 	        <tx:method name="find*" propagation="REQUIRED" read-only="true" />  

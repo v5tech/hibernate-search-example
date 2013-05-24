@@ -85,8 +85,7 @@ public class BookDaoImpl implements  BookDao {
 		FullTextQuery fullTextQuery = fullTextEntityManager.createFullTextQuery(luceneQuery);
 		int searchresultsize = fullTextQuery.getResultSize();
 		queryResult.setSearchresultsize(searchresultsize);
-		System.out.println("共查找到["+searchresultsize+"]条记录");
-		
+				
 		fullTextQuery.setFirstResult(start);
 		fullTextQuery.setMaxResults(pagesize);
 		
@@ -124,11 +123,8 @@ public class BookDaoImpl implements  BookDao {
 			} catch (Exception e) {
 			}
 			
-			books.add(book);
+			books.add(book);	
 			
-			
-			System.out.println("书名:"+book.getName()+"\n描述:"+book.getDescription()+"\n出版日期:"+book.getPublicationDate());
-			System.out.println("----------------------------------------------------------");
 		}
 		
 		queryResult.setSearchresult(books);

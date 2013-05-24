@@ -137,9 +137,7 @@ public class BookController {
 		}
 		return "ÐÞ¸Ä³É¹¦!";
 	}
-	
-	
-	
+		
 	
 	@RequestMapping("/load/{id}")
 	@ResponseBody

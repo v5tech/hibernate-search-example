@@ -20,26 +20,27 @@
 
 	<!-- project default level -->
 	
-	<logger name="org.hibernate.search.jpa.example" level="DEBUG" />
+	<logger name="org.hibernate.search.jpa.example" level="INFO" />
 	
-	<logger name="org.springframework.data" level="DEBUG" />
+	<logger name="org.springframework.data" level="INFO" />
 
-	<logger name="org.springframework.core" level="DEBUG" />
+	<logger name="org.springframework.core" level="INFO" />
 
-	<logger name="org.springframework.beans" level="DEBUG" />
+	<logger name="org.springframework.beans" level="INFO" />
 
-	<logger name="org.springframework.context" level="DEBUG" />
+	<logger name="org.springframework.context" level="INFO" />
 
-	<logger name="org.springframework.http" level="DEBUG" />
+	<logger name="org.springframework.http" level="INFO" />
 
-	<logger name="org.springframework.web" level="DEBUG" />
+	<logger name="org.springframework.web" level="INFO" />
 	
 	<!-- <logger name="jdbc.sqltiming" level="INFO"/> -->
 	
-	<logger name="jdbc.sqlonly" level="DEBUG" />
+	<logger name="jdbc.sqlonly" level="INFO" />
 
-	<root level="WARN">
+	<root level="ERROR">
 		<appender-ref ref="console" />
 		<appender-ref ref="rollingFile" />
 	</root>
+	
 </configuration>
