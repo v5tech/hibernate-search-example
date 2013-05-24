@@ -6,7 +6,7 @@ Spring3.2+Hibernate4.2+Hibernate Search4.2ÕûºÏIKAnalyzer¡¢paodingÊµÏÖÖĞÎÄ·Ö´ÊË÷Ò
 
 # ÏîÄ¿½ØÍ¼
 
-![hibernate_search_reference.pdf](hibernate_search_reference.pdf)
+![Hibernate_Search_Example.png](Hibernate_Search_Example.png)
 
 1. hibernate-search-hibernate(»ùÓÚhibernate4·½Ê½µÄÊµÏÖ)
 
