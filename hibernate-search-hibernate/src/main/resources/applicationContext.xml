@@ -26,9 +26,6 @@
 	<context:component-scan base-package="org.hibernate.search.hibernate.example">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
-	
-	<tx:annotation-driven transaction-manager="hibernate4TransactionManager"/>
-	
     
     <!-- 阿里 Druid数据源 -->
 	<!-- https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98 -->
@@ -124,33 +121,42 @@
 		-->
 		
 	</bean>
-
+	
+	<bean class="org.hibernate.search.hibernate.example.IndexManger" depends-on="hibernate4sessionFactory"/>
+	
 	<bean id="hibernate4TransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
-		<property name="dataSource" ref="hibernate4DataSource"></property>
 	</bean>
 	
-	
-	<bean class="org.hibernate.search.hibernate.example.IndexManger" depends-on="hibernate4sessionFactory">
-		<property name="sessionFactory" ref="hibernate4sessionFactory"></property>
-	</bean>
-	
-	<!--  
-	
-	<aop:aspectj-autoproxy/>
+	<aop:aspectj-autoproxy expose-proxy="true"/>
+	<tx:annotation-driven transaction-manager="hibernate4TransactionManager"/>
 	
 	<tx:advice id="txAdvice" transaction-manager="hibernate4TransactionManager">
 		<tx:attributes>
-			<tx:method name="add*" propagation="REQUIRED"/>
-			<tx:method name="query*" propagation="REQUIRED"/>
-			<tx:method name="update*" propagation="REQUIRED"/>
-			<tx:method name="del*" propagation="REQUIRED"/>
+			<tx:method name="save*" propagation="REQUIRED" />  
+	        <tx:method name="add*" propagation="REQUIRED" />  
+	        <tx:method name="create*" propagation="REQUIRED" />  
+	        <tx:method name="insert*" propagation="REQUIRED" />  
+	        <tx:method name="update*" propagation="REQUIRED" />  
+	        <tx:method name="merge*" propagation="REQUIRED" />  
+	        <tx:method name="del*" propagation="REQUIRED" />  
+	        <tx:method name="remove*" propagation="REQUIRED" />  
+	        <tx:method name="put*" propagation="REQUIRED" />  
+	        <tx:method name="use*" propagation="REQUIRED"/>  
+	        <!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->  
+	        <tx:method name="get*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="count*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="find*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="list*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="query*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="load*" propagation="REQUIRED" read-only="true" />  
+	        <tx:method name="*" read-only="true" />  
 		</tx:attributes>
 	</tx:advice>
 
 	<aop:config expose-proxy="true">
-		<aop:pointcut expression="execution(* org.hibernate.search.hibernate.example.service..*.*(..))" id="pointcut"/>
+		<aop:pointcut expression="execution(* org.hibernate.search.hibernate.example.service.*.*(..))" id="pointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
 	</aop:config>
-	-->
+	
 </beans>
