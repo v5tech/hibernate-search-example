@@ -41,6 +41,7 @@ public class BookController {
 		}
 		ModelAndView modelAndView = new ModelAndView("list");
 		modelAndView.addObject("queryResult", queryResult);
+		modelAndView.addObject("keyword", keyword);
 		return modelAndView;
 	}
 	

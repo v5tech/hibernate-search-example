@@ -44,7 +44,7 @@
 	<form name="searchform" method="get" action="${pageContext.request.contextPath }/search">
 		<input type="hidden" name="start" value="0">
 		<input type="hidden" name="pagesize" value="5">
-		<input name="keyword" type="text">
+		<input name="keyword" type="text" value="${keyword }">
 		<input type="submit" value="搜索">
 	</form>
 	</div>
