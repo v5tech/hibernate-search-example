@@ -1,5 +1,7 @@
 # hibernate-search-example
 
+[![Build Status](https://travis-ci.org/sxyx2008/hibernate-search-example.png)](https://travis-ci.org/sxyx2008/hibernate-search-example)
+
 # 项目描述
 
 Spring3.2+Hibernate4.2+Hibernate Search4.2整合IKAnalyzer、paoding实现中文分词索引实时同步。
