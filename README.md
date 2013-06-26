@@ -2,21 +2,22 @@
 
 [![Build Status](https://travis-ci.org/sxyx2008/hibernate-search-example.png)](https://travis-ci.org/sxyx2008/hibernate-search-example)
 
-# ÏîÄ¿ÃèÊö
+# é¡¹ç›®æè¿°
 
-Spring3.2+Hibernate4.2+Hibernate Search4.2ÕûºÏIKAnalyzer¡¢paodingÊµÏÖÖĞÎÄ·Ö´ÊË÷ÒıÊµÊ±Í¬²½¡£
+Spring3.2+Hibernate4.2+Hibernate Search4.2æ•´åˆIKAnalyzerã€paodingå®ç°ä¸­æ–‡åˆ†è¯ç´¢å¼•å®æ—¶åŒæ­¥ã€‚
 
-# ÏîÄ¿½ØÍ¼
+# é¡¹ç›®æˆªå›¾
 
 ![Hibernate_Search_Example.png](Hibernate_Search_Example.png)
 
-1. hibernate-search-hibernate(»ùÓÚhibernate4·½Ê½µÄÊµÏÖ)
+1. hibernate-search-hibernate(åŸºäºhibernate4æ–¹å¼çš„å®ç°)
 
    spring3.2+hibernate4.2+hibernate search4.2+IKAnalyzer+paoding
-2. hibernate-search-jpa(»ùÓÚjpa·½Ê½µÄÊµÏÖ)
+
+2. hibernate-search-jpa(åŸºäºjpaæ–¹å¼çš„å®ç°)
 
    spring3.2+jpa+hibernate search4.2+IKAnalyzer+paoding
 
-3. hibernate-example(spring3.2+hibernate4+spring mvcÕûºÏ¶à¶Ô¶àÀı×Ó)
+3. hibernate-example(spring3.2+hibernate4+spring mvcæ•´åˆå¤šå¯¹å¤šä¾‹å­)
 
    spring3.2+hibernate4.2+spring mvc
