@@ -21,3 +21,6 @@ Spring3.2+Hibernate4.2+Hibernate Search4.2整合IKAnalyzer、paoding实现中文
 3. hibernate-example(spring3.2+hibernate4+spring mvc整合多对多例子)
 
    spring3.2+hibernate4.2+spring mvc
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sxyx2008/hibernate-search-example/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
